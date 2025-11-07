@@ -1,0 +1,63 @@
+.furniture-banner {
+  background-color: #faf4e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-container {
+  display: flex;
+  gap: 65px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+.banner-image{
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  text-align: left;
+  flex: 1;
+}
+
+.banner-content .new-arrivals {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.banner-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.order-btn {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 18px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.order-btn:hover {
+  background-color: #000;
+  color: #fff;
+}

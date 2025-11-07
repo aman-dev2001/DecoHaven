@@ -1,0 +1,59 @@
+.blog-container {
+  padding: 86px 100px;
+}
+
+.blog-hero {
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
+
+.blog-hero h1 {
+  font-size: 2.5rem;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-link {
+  color: #000;
+  border: none;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #ffc107;
+  border-radius: 5px;
+}
+
+.blog-container {
+  display: flex;
+  gap: 30px;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+@media (max-width: 767px) {
+  .blog-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .blog-content {
+    padding: 0 15px;
+  }
+}

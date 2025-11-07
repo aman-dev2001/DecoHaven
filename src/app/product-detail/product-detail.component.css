@@ -1,0 +1,338 @@
+/* ------------------------------
+   PRODUCT DETAIL PAGE LAYOUT
+--------------------------------*/
+.product-detail {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  /* slightly reduced gap for better fit */
+  padding: 40px 60px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow-x: hidden;
+  /* prevent horizontal shift */
+}
+
+/* LEFT SIDE */
+.left-side {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  /* zoom-result absolute inside this */
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* THUMBS */
+.thumbs {
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.18s ease;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+  border-color: #ddd;
+}
+
+.thumb.active {
+  border-color: #5F56D6;
+  transform: scale(1.07);
+}
+
+/* MAIN / ZOOM CONTAINER */
+.zoom-container {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* MAIN IMAGE */
+.main-image {
+  position: relative;
+  width: 450px;
+  /* base size used in TS */
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* LENS */
+.lens {
+  position: absolute;
+  border: 2px solid rgba(25, 118, 210, 0.95);
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  /* do not capture pointer */
+  z-index: 20;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  /* width/height set dynamically from [ngStyle] */
+}
+
+/* ZOOM RESULT — ABSOLUTE INSIDE left-side so it won't push right-side */
+.zoom-result {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 24px);
+  /* places it right of main-image plus gap */
+  width: 450px;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 18;
+  pointer-events: none;
+  background-color: #ffffff;
+  /* does not capture pointer so hover stays on main-image */
+}
+
+/* RIGHT SIDE */
+.right-side {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.right-side h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.rating i {
+  color: #ffb400;
+  margin-right: 4px;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+}
+
+.likes i {
+  color: #e53935;
+}
+
+/* DESCRIPTION & PRICE */
+.desc {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px 0 12px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.new-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+}
+
+.old-price {
+  font-size: 16px;
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* OPTIONS */
+.product-option {
+  margin-top: 10px;
+}
+
+.product-option p {
+  margin: 8px 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.sizes span {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.sizes span.active {
+  background: #5F56D6;
+  color: #fff;
+  border-color: #5F56D6;
+}
+
+.colors span {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.colors span.active {
+  border-color: #000;
+}
+
+/* QTY & CART */
+.qty-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.qty-box button {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.add-cart {
+  margin-top: 14px;
+  padding: 12px 28px;
+  background: #5F56D6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* small improvements */
+@media (max-width: 1200px) {
+  .product-detail {
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .main-image,
+  .zoom-result {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 22px;
+    align-items: center;
+  }
+
+  .zoom-result {
+    display: none;
+  }
+
+  /* disable zoom on tablet */
+  .left-side {
+    justify-content: center;
+  }
+
+  .main-image {
+    width: 100%;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .thumbs {
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .thumb {
+    width: 60px;
+    height: 60px;
+  }
+
+  .main-image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail {
+    padding: 16px;
+    gap: 18px;
+  }
+
+  .thumb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .main-image {
+    height: 260px;
+  }
+
+  .add-cart {
+    width: 100%;
+    text-align: center;
+  }
+}

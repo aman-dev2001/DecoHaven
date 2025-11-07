@@ -1,0 +1,41 @@
+.service-section {
+  width: 100%;
+  background: #FAF4F4;
+}
+
+.service-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 96px 100px;
+}
+
+.card-contaiiner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  gap: 48px;
+}
+
+.service-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.service-card p {
+  color: #9F9F9F;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+}

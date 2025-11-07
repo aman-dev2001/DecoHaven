@@ -1,0 +1,151 @@
+.footer-section .container{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding:100px 100px 38px 100px;
+}
+
+footer h6 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer input::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.social-icons .icon {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 18px;
+  transition: 0.3s ease;
+  overflow: hidden;
+  /* ✅ icon बाहर नहीं आएगा */
+  border: 1px solid #ddd;
+}
+
+/* ✅ Hover मुख्य effect */
+.social-icons .icon:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ✅ Inside ring animation */
+.social-icons .icon::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  /* ✅ अंदर ही border बनेगा */
+  border-radius: 50%;
+  border: 2px solid #000;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: 0.3s ease-out;
+}
+
+/* ✅ Hover → inner ring visible + glow */
+.social-icons .icon:hover::before {
+  opacity: 0.5;
+  transform: scale(1);
+  border-color: #fff;
+}
+
+.address-details {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: #9F9F9F;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 55px;
+  color: #9F9F9F;
+}
+
+.footer-links {
+  display: flex;
+  gap: 46px;
+  flex-direction: column;
+  margin: 0 !important;
+
+}
+
+.footer-links li {
+  /* margin-bottom: 46px; */
+}
+
+.footer-links li a{
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-logo {
+  margin-bottom: 32px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.news-latter-form{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.news-latter-form input{
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #000000;
+}
+.news-latter-form input:focus{
+  outline: none;
+}
+.news-latter-form input::placeholder{
+  font-size: 14px;
+  color: #9F9F9F;
+}
+
+.subscribe-btn {
+font-size: 14px;
+font-weight: 500;
+color: #000000;
+border: none;
+border-radius: 0;
+border-bottom: 1px solid #000000;
+}
+
+.copyright {
+
+}
+
+.copyright p {
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+}
+.innner-container {
+  border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 35px;
+  padding-bottom: 48px;
+}

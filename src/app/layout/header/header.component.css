@@ -1,0 +1,41 @@
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link {
+  color: #000;
+  margin: 0 10px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffce00;
+}
+
+.icon-group i {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-group i:hover {
+  color: #ffce00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .icon-group {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,144 @@
+/* General Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* 🏢 Our Story */
+.about-story {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-story .text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-story .text-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-story .text-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-story .image-content {
+  flex: 1;
+  text-align: center;
+}
+
+.about-story img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* 💪 Mission & Vision Section */
+.mission-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 60px 20px;
+}
+
+.mission-vision .mission-content,
+.mission-vision .vision-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mission-vision .text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission-vision h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.mission-vision p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.mission-vision .image {
+  flex: 1;
+  text-align: center;
+}
+
+.mission-vision img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 📊 Statistics */
+.about-stats {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-stats .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.stat-box {
+  background: #f9fafb;
+  padding: 30px 50px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  background: #f5c518;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.stat-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* 🌐 Responsive */
+@media (max-width: 992px) {
+  .about-story,
+  .mission-vision .mission-content,
+  .mission-vision .vision-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-vision img {
+    max-width: 100%;
+  }
+}

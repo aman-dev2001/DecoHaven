@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold fs-4" routerLink="/">ShopMate</a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/shop" routerLinkActive="active">
+            Shop
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/about" routerLinkActive="active">
+            About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/contact" routerLinkActive="active">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Right Icons -->
+      <div class="d-flex align-items-center gap-3 icon-group">
+        <!-- Profile -->
+        <i class="bi bi-person fs-5" routerLink="/account" style="cursor: pointer;"></i>
+
+        <!-- Search -->
+        <i class="bi bi-search fs-5" routerLink="/search" style="cursor: pointer;"></i>
+
+        <!-- Wishlist -->
+        <i class="bi bi-heart fs-5" routerLink="/wishlist" style="cursor: pointer;"></i>
+
+        <!-- Cart -->
+        <i class="bi bi-cart3 fs-5" routerLink="/cart" style="cursor: pointer;"></i>
+      </div>
+
+    </div>
+  </div>
+</nav>

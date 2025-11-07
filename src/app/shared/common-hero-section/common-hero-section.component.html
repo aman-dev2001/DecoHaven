@@ -1,0 +1,24 @@
+<section class="hero-section" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+  <div class="overlay"></div>
+
+  <div class="hero-content text-center">
+    <img src="assets/images/banner-logo.svg" alt="Logo" class="hero-logo" />
+
+    <h1 class="hero-title">{{ title }}</h1>
+
+    <!-- <nav class="breadcrumb">
+      <ng-container *ngFor="let crumb of breadcrumbs; let last = last">
+        <a *ngIf="!last" href="#">{{ crumb }}</a>
+        <span *ngIf="!last">›</span>
+        <span *ngIf="last">{{ crumb }}</span>
+      </ng-container>
+    </nav> -->
+
+    <nav class="breadcrumb">
+      <ng-container *ngFor="let crumb of breadcrumbs; let i = index">
+        <a *ngIf="i < breadcrumbs.length - 1" href="#" class="crumb">{{ crumb }}</a>
+        <span *ngIf="i === breadcrumbs.length - 1" class="crumb last">{{ crumb }}</span>
+      </ng-container>
+    </nav>
+  </div>
+</section>

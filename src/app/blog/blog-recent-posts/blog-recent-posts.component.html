@@ -1,0 +1,17 @@
+<div class="recent-posts">
+  <h3 class="section-title">Recent Posts</h3>
+
+  <div class="swiper recentSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let post of recentPosts">
+        <div class="recent-item">
+          <img [src]="post.image" class="recent-thumb" />
+          <div class="recent-info">
+            <h4 class="recent-title">{{ post.title }}</h4>
+            <p class="recent-date">{{ post.date }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

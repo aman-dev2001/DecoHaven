@@ -1,0 +1,33 @@
+.card img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card {
+
+}
+
+.card:hover {
+    
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+.card-body {
+    text-align: center;
+    padding: 32px;
+}
+.card-footer{
+
+}
+@media (max-width: 768px) {
+  .card img {
+    height: 200px;
+  }
+}

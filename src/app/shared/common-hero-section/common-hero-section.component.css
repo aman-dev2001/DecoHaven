@@ -1,0 +1,74 @@
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    height: 316px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-logo {
+    width: 76px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.crumb {
+    position: relative;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    padding-right: 16px; /* ✅ arrow के लिए जगह */
+}
+
+.crumb::after {
+    content: "›";          /* ✅ arrow icon */
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #000;
+    font-weight: 300;
+}
+
+.last {
+    font-weight: 300;
+    color: #000;
+    padding-right: 0;
+}
+
+/* ✅ Last breadcrumb पर arrow हटाओ */
+.last::after {
+    content: "";
+}

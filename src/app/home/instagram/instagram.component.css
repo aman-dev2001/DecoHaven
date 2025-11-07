@@ -1,0 +1,58 @@
+.instagram-banner {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: url("../../../assets/images/OurInstagram.png") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.overlay-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.overlay-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.follow-btn {
+  background-color: #FAF4F4;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 20px 20px 0px #0000001A;
+
+}
+
+@media (max-width: 768px) {
+  .instagram-banner {
+    height: 350px;
+  }
+
+  .overlay-content h2 {
+    font-size: 2rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.9rem;
+  }
+
+  .follow-btn {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,60 @@
+<div class="cart-container" *ngIf="cartItems.length > 0; else emptyCart">
+
+  <!-- ✅ Cart Table -->
+  <div class="cart-left">
+    <div class="cart-header">
+      <span>Product</span>
+      <span>Price</span>
+      <span>Quantity</span>
+      <span>Subtotal</span>
+    </div>
+
+    <div class="cart-item" *ngFor="let item of cartItems; let i = index">
+      <div class="product-info">
+        <img [src]="item.image" alt="product" class="product-img">
+
+        <div class="product-title">{{ item.title }}</div>
+      </div>
+
+      <div class="price">Rs. {{ item.price | number:'1.0-0' }}</div>
+
+      <div class="qty-box">
+        <button (click)="decreaseQty(item)">-</button>
+        <input type="text" [value]="item.qty" readonly>
+        <button (click)="increaseQty(item)">+</button>
+      </div>
+
+      <div class="subtotal">Rs. {{ (item.price * item.qty) | number:'1.0-0' }}</div>
+
+      <i class="bi bi-trash trash-icon" (click)="removeItem(i)"></i>
+    </div>
+  </div>
+
+  <!-- ✅ Cart Totals -->
+  <div class="cart-right">
+    <h2>Cart Totals</h2>
+
+    <div class="line">
+      <span>Subtotal</span>
+      <span>Rs. {{ totalAmount | number:'1.0-0' }}</span>
+    </div>
+
+    <div class="line total">
+      <span>Total</span>
+      <span class="highlight">Rs. {{ totalAmount | number:'1.0-0' }}</span>
+    </div>
+
+    <button class="checkout-btn">Check Out</button>
+  </div>
+
+</div>
+
+<!-- ✅ Empty Cart Template -->
+<ng-template #emptyCart>
+  <div class="empty">
+    <!-- <div class="emoji">🛒</div> -->
+    <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="">
+    <h2>Your cart is empty!</h2>
+    <p>Add items to continue shopping.</p>
+  </div>
+</ng-template>

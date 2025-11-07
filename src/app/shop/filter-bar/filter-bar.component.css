@@ -1,0 +1,134 @@
+.filter-sec {
+  background-color: #FAF4F4;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  gap: 15px;
+
+}
+
+/* Left side */
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.filter-btn i {
+  font-size: 18px;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.view-toggle i {
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.view-toggle i.active,
+.view-toggle i:hover {
+  color: #000;
+}
+
+.divider {
+  position: relative;
+  width: 1px;
+  /* narrow container */
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -12px;
+  height: 32px;
+  width: 1px;
+  background-color: #ccc;
+}
+
+
+.results-info {
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Right side */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.show-select,
+.sort-select {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: #000;
+}
+
+.show-select label,
+.sort-select label {
+  font-size: 16px;
+  margin: 0;
+}
+
+input[type="number"],
+select {
+    padding: 12px 16px;
+    border: none;
+    font-size: 16px;
+    color: #9F9F9F;
+    background: #ffffff;
+    appearance: none;
+}
+
+select {
+  width: 130px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .right-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .results-info {
+    font-size: 13px;
+  }
+}

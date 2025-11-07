@@ -1,0 +1,135 @@
+.cart-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* ✅ Left Cart Area */
+.cart-left {
+  width: 70%;
+}
+
+.cart-header {
+  background: #fff8e6;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 40% 15% 20% 15% 10%;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 40% 15% 20% 15% 10%;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background: #fff3d6;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.product-title {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+.price,
+.subtotal {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ✅ Quantity Box */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-box button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.qty-box input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ✅ Trash Icon */
+.trash-icon {
+  font-size: 20px;
+  color: #e4c87c;
+  cursor: pointer;
+}
+
+/* ✅ Right Side Cart Total */
+.cart-right {
+  width: 30%;
+  background: #fff8e6;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.cart-right h2 {
+  margin-bottom: 20px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.total .highlight {
+  color: #d49c00;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ✅ Checkout Button */
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* ✅ Empty Cart */
+.empty {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.empty .emoji {
+  font-size: 80px;
+}
+
+.empty h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}

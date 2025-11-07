@@ -1,0 +1,76 @@
+<app-common-hero-section
+  title="About Us"
+  [breadcrumbs]="['Home', 'About']"
+  backgroundImage="assets/images/common-hero-section.svg"
+></app-common-hero-section>
+
+<!-- 🏢 Our Story -->
+<section class="about-story container">
+  <div class="text-content">
+    <h2>Our Story</h2>
+    <p>
+      Founded with a vision to revolutionize online shopping, ShopMate has been
+      connecting people with products they love for over 8 years. What started as
+      a small startup has grown into a trusted brand with thousands of happy customers.
+    </p>
+    <p>
+      Our journey began with one simple idea — to make shopping effortless,
+      affordable, and inspiring. Every product we feature is hand-picked to bring
+      both function and fashion into your life.
+    </p>
+  </div>
+  <div class="image-content">
+    <img
+      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80"
+      alt="Our Story"
+    />
+  </div>
+</section>
+
+<!-- 💪 Mission -->
+<section class="mission-vision container">
+  <div class="mission-content">
+    <div class="text">
+      <h3>Our Mission</h3>
+      <p>
+        To empower customers by providing top-quality products with a seamless
+        online shopping experience backed by excellent service. We believe in
+        innovation, accessibility, and customer satisfaction as the core of our business.
+      </p>
+    </div>
+    <div class="image">
+      <img
+        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=80"
+        alt="Our Mission"
+      />
+    </div>
+  </div>
+
+  <!-- 🌍 Vision Section -->
+  <div class="vision-content">
+    <div class="image">
+      <img
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80"
+        alt="Our Vision"
+      />
+    </div>
+    <div class="text">
+      <h3>Our Vision</h3>
+      <p>
+        To be a global leader in eCommerce by redefining innovation, creativity,
+        and trust in every customer interaction. We aim to set new standards in
+        design, quality, and convenience that inspire confidence and loyalty.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 📊 Statistics -->
+<section class="about-stats">
+  <div class="container">
+    <div class="stat-box" *ngFor="let item of stats">
+      <h2>{{ item.value }}</h2>
+      <p>{{ item.label }}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+<app-common-hero-section title="Contact" [breadcrumbs]="['Home', 'Contact']"
+  backgroundImage="assets/images/common-hero-section.svg"></app-common-hero-section>
+
+<section class="contact-section container">
+  <div class="header">
+    <h2>Get In Touch With Us</h2>
+    <p>
+      For more information about our product & services, please feel free to
+      drop us an email. Our staff is always there to help you out. Do not
+      hesitate!
+    </p>
+  </div>
+
+  <div class="contact-content">
+    <!-- Left Section -->
+    <div class="contact-info">
+      <div class="info-item">
+        <span class="icon">
+          <img src="assets/images/location.svg" alt="">
+        </span>
+        <div class="detail-container">
+          <h4>Address</h4>
+          <p>236 5th SE Avenue, New York NY10000, United States</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+         <span class="icon">
+          <img src="assets/images/phone.svg" alt="">
+        </span>
+        <div class="detail-container">
+          <h4>Phone</h4>
+          <p>Mobile: (+84) 546-6789<br />Hotline: (+84) 456-6789</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="icon">
+          <img src="assets/images/clock.svg" alt="">
+        </span>
+        <div class="detail-container">
+          <h4>Working Time</h4>
+          <p>
+            Monday–Friday: 9:00–22:00<br />
+            Saturday–Sunday: 9:00–21:00
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <form class="contact-form" (ngSubmit)="onSubmit()" #form="ngForm">
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" name="name" [(ngModel)]="contactData.name" placeholder="Abc" required />
+      </div>
+
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" name="email" [(ngModel)]="contactData.email" placeholder="Abc@def.com" required />
+      </div>
+
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" name="subject" [(ngModel)]="contactData.subject" placeholder="This is optional" />
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" [(ngModel)]="contactData.message" rows="4"
+          placeholder="Hi! I'd like to ask about..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</section>
+
+<app-common-footer-info-section></app-common-footer-info-section>

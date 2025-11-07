@@ -1,0 +1,64 @@
+<div class="blog--page">
+  <!-- loop posts -->
+  <div class="row gx-0" *ngFor="let post of posts; let i = index">
+    <div class="col-12 post-card">
+      <div class="col-auto  align-items-stretch">
+        
+        <!-- Image column -->
+        <div class="img-container">
+          <img [src]="post.image" [alt]="post.title" class="post-img" />
+        </div>
+
+        <!-- Content column -->
+        <div class="post-body">
+          <div class="meta-post">
+
+            <!-- Author -->
+            <div class="meta-content">
+              <span class="meta-author">
+                <i class="bi bi-person"></i>
+                {{ post.admin }}
+              </span>
+            </div>
+
+            <!-- Date -->
+            <div class="meta-content">
+              <span class="meta-date">
+                <i class="bi bi-calendar"></i>
+                {{ post.date }}
+              </span>
+            </div>
+
+            <!-- Category -->
+            <div class="meta-content">
+              <span class="meta-category">
+                <i class="bi bi-tag"></i>
+                {{ post.category }}
+              </span>
+            </div>
+
+          </div> <!-- /.meta-post -->
+           <!-- Title & Excerpt -->
+      <h3 class="post-title">{{ post.title }}</h3>
+      <p class="post-detail">{{ post.excerpt }}</p>
+
+      <!-- Read More -->
+      <div class="d-flex gap-2">
+        <a href="#" class="btn read-more">Read more</a>
+      </div>
+        </div> <!-- /.post-body -->
+
+      </div> <!-- /.post-card -->
+
+     
+    </div> 
+  </div>
+</div>
+
+<div class="row d-md-none">
+  <div class="col-12" *ngFor="let post of posts">
+    <div class="card mt-3">
+      <img [src]="post.image" [alt]="post.title" class="card-img-top" />
+    </div>
+  </div>
+</div>
