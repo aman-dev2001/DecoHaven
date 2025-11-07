@@ -5,8 +5,6 @@ import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { NewArrivalComponent } from './new-arrival/new-arrival.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import { OurBlogsComponent } from './our-blogs/our-blogs.component';
-// import { FeatureProductComponent } from '../shared/feature-product/feature-product.component';
-// import { FeatureProductComponent } from '../shared/feature-product/feature-product.component';
 import { FeatureProductComponent } from '../shared/feature-product/feature-product.component';
 
 @Component({
@@ -16,7 +14,6 @@ import { FeatureProductComponent } from '../shared/feature-product/feature-produ
     CommonModule,
     HeroComponent,
     FeatureCardComponent,
-    // FeatureProductComponent,
     FeatureProductComponent,
     NewArrivalComponent,
     OurBlogsComponent,
