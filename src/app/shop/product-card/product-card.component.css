@@ -18,7 +18,7 @@
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-3px); */
 }
 
 /* Wishlist Icon (Right side top) */
@@ -121,19 +121,8 @@
 /* Add to Cart button */
 .add-cart-btn {
   width: 100%;
-  padding: 12px;
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  background: #222;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.add-cart-btn:hover {
-  background: #444;
-}
 .wishlist-icon {
     position: absolute;
     right: 18px;
@@ -156,7 +145,6 @@
     transition: 0.3s ease;
 }
 
-/* ✅ When heart is active (wishlist added) */
 .wishlist-icon i.active {
     color: red;
 }

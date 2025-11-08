@@ -51,28 +51,38 @@
 
       <!-- Right Section -->
       <form class="contact-form" (ngSubmit)="onSubmit()" #form="ngForm">
-        <div class="form-group">
+        <div class="form-group effect">
+          <input class="input-effect" type="text" placeholder="" [(ngModel)]="contactData.name">
           <label>Your name</label>
-          <input type="text" name="name" [(ngModel)]="contactData.name" placeholder="Abc" required />
+          <span class="focus-border"></span>
         </div>
 
-        <div class="form-group">
+        <div class="form-group effect">
+          <input class="input-effect" type="text" placeholder="">
+          <label>First Name</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="form-group effect">
+          <input class="input-effect" type="email" name="email" [(ngModel)]="contactData.email" placeholder=""
+            required />
           <label>Email address</label>
-          <input type="email" name="email" [(ngModel)]="contactData.email" placeholder="Abc@def.com" required />
         </div>
 
-        <div class="form-group">
+        <div class="form-group effect">
+          <input class="input-effect" type="text" name="subject" [(ngModel)]="contactData.subject" placeholder="" />
           <label>Subject</label>
-          <input type="text" name="subject" [(ngModel)]="contactData.subject" placeholder="This is optional" />
+          <span class="focus-border"></span>
         </div>
 
-        <div class="form-group">
+        <div class="form-group effect">
+          <textarea class="input-effect" name="message" [(ngModel)]="contactData.message" rows="1"
+            placeholder=""></textarea>
           <label>Message</label>
-          <textarea name="message" [(ngModel)]="contactData.message" rows="4"
-            placeholder="Hi! I'd like to ask about..."></textarea>
+          <span class="focus-border"></span>
         </div>
 
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn btn-animated">Submit</button>
       </form>
     </div>
   </div>

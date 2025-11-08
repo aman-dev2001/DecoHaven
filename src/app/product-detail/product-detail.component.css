@@ -2,18 +2,7 @@
    PRODUCT DETAIL PAGE LAYOUT
 --------------------------------*/
 .product-detail {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  gap: 40px;
-  /* slightly reduced gap for better fit */
-  padding: 40px 60px;
-  box-sizing: border-box;
-  align-items: flex-start;
-  background-color: #fff;
-  overflow-x: hidden;
-  /* prevent horizontal shift */
+  padding: 100px 0px;
 }
 
 /* LEFT SIDE */

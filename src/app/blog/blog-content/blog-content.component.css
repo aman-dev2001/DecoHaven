@@ -54,15 +54,43 @@
 
 @media screen and (max-width: 1366px) {}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+  .post-card {
+    margin: 0 0 46px 0;
+  }
+}
 
-@media screen and (max-width: 991px) {}
+@media screen and (max-width: 991px) {
+  .post-card {
+    margin: 0 0 42px 0;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .meta-post {
     gap: 16px;
     flex-wrap: wrap;
   }
+
+  .post-title {
+    font-size: 24px;
+  }
+
+  .post-card {
+    margin: 0 0 36px 0;
+  }
+
+  .post-detail {
+    margin-bottom: 24px;
+  }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+  .post-title {
+    font-size: 24px;
+  }
+
+  .post-card {
+    margin: 0 0 32px 0;
+  }
+}

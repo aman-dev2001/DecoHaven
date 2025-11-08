@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-our-blogs',
-  standalone: true, // ✅ Required for standalone component
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './our-blogs.component.html',
-  styleUrls: ['./our-blogs.component.css'] // ✅ Correct property name is 'styleUrls'
+  styleUrls: ['./our-blogs.component.css']
 })
 export class OurBlogsComponent {
   blogs = [
@@ -30,3 +31,4 @@ export class OurBlogsComponent {
     }
   ];
 }
+

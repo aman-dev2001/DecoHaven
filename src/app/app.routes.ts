@@ -15,14 +15,14 @@ export const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'cart', component: CartComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'cart', component: CartComponent },
   {
     path: 'product/:id',
     loadComponent: () =>
       import('./product-detail/product-detail.component')
         .then(m => m.ProductDetailComponent),
   },
-  { path: 'contact', component: ContactComponent },
-  { path: 'blog', component: BlogComponent },
 ];

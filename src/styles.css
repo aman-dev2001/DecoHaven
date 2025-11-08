@@ -12,14 +12,20 @@
   font-family: "Poppins", sans-serif;
 }
 
+
+.container {
+  max-width: 1440px;
+  width: 86%;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .btn-animated {
   position: relative;
   display: inline-block;
   padding: 14px 38px;
   background: #fff;
-  /* white base */
   color: #111827;
-  /* dark text */
   font-weight: 600;
   font-size: 16px;
   border: 2px solid #111827;
@@ -44,7 +50,7 @@
       transparent,
       rgba(255, 255, 255, 0.7),
       transparent);
-  transition: all 0.6s ease;
+  transition: all 0.7s ease;
 }
 
 /* ⚡ Hover Effect - Turns black, glowing wave moves */
@@ -52,7 +58,7 @@
   background: #111827;
   color: #ffffff;
   border-color: #111827;
-  transform: translateY(-3px) scale(1.03);
+  /* transform: translateY(-3px) scale(1.03); */
   box-shadow: 0 0 25px rgba(17, 24, 39, 0.6);
 }
 
@@ -72,7 +78,7 @@
   border-radius: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: all 0.6s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .btn-animated:hover::after {
@@ -106,11 +112,10 @@
   animation: none;
 }
 
-.container {
-  max-width: 1440px;
-  width: 86%;
-  margin: 0 auto;
-  padding: 0;
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -120,3 +125,4 @@
     margin: 0 auto;
   }
 }
+

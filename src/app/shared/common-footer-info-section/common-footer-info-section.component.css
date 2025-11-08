@@ -13,10 +13,9 @@
   align-items: flex-start;
   margin: auto;
   gap: 48px;
-  flex-wrap: wrap;
 }
 
-.service-card{
+.service-card {
   max-width: 376px;
   width: 100%;
   margin: 0 auto;
@@ -78,6 +77,10 @@
 
   .card-container {
     gap: 36px;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
   }
 }
 
