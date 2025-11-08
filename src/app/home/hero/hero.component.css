@@ -44,23 +44,23 @@ swiper-container {
 }
 
 .slide-title h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: 64px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  color: #ffffff;
 }
 
 .slide-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 20px;
+  font-weight: 400px;
+  margin: 24px;
 }
 
 .slide-btns a {
   display: inline-block;
   text-decoration: none;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  margin-right: 1rem;
-  border-radius: 50px;
+  font-weight: 500;
+  padding: 12px 24px;
   transition: all 0.3s ease;
 }
 

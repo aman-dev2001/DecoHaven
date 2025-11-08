@@ -1,31 +1,29 @@
 <section class="feature-products-section">
   <div class="container">
-    <div class="header">
-      <h2 class="title">Featured Products</h2>
+    <div class="feature-header">
+      <h2 class="feature-title">Featured Products</h2>
+      <p class="feature-detail">Find a bright ideal to suit your taste with our great selection of suspension, floor and
+        table lights.</p>
 
-      <!-- Custom Navigation Arrows -->
-      <div class="arrows">
-        <button class="prev-btn" aria-label="Previous">
-          <!-- Left Tir Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </button>
-
-        <button class="next-btn" aria-label="Next">
-          <!-- Right Tir Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 6l6 6-6 6" />
-          </svg>
-        </button>
-      </div>
     </div>
+    <div class="feature-arrows">
+      <button class="prev-btn" aria-label="Previous">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
 
-    <!-- Swiper Container -->
+      <button class="next-btn" aria-label="Next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+    <!-- ✅ Swiper Container -->
     <swiper-container class="custom-swiper" slides-per-view="4" space-between="25" loop="false"
-      autoplay='{"delay": 2500, "disableOnInteraction": false}' pagination='{"clickable": true}' breakpoints='{
+      autoplay='{"delay":2500,"disableOnInteraction":false}' pagination='{"clickable":true}' breakpoints='{
         "320": {"slidesPerView": 1.2, "spaceBetween": 15},
         "480": {"slidesPerView": 2, "spaceBetween": 18},
         "768": {"slidesPerView": 3, "spaceBetween": 22},
@@ -44,7 +42,6 @@
       </swiper-slide>
     </swiper-container>
 
-    <!-- Pagination -->
     <div class="swiper-pagination"></div>
   </div>
 </section>

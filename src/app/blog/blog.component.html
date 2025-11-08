@@ -1,14 +1,18 @@
 <app-common-hero-section title="Blog" [breadcrumbs]="['Home', 'Blog']"
     backgroundImage="assets/images/common-hero-section.svg"></app-common-hero-section>
 
-<div class="blog-container">
-    <div>
-        <app-blog-content></app-blog-content>
-        <app-blog-pagination></app-blog-pagination>
-    </div>
-    <div class="blog-content">
-        <app-blog-sidebar></app-blog-sidebar>
-        <app-blog-recent-posts></app-blog-recent-posts>
+<div class="blog-section">
+    <div class="container">
+        <div class="blog-layout">
+            <div class="blog-wrapper">
+                <app-blog-content></app-blog-content>
+                <app-blog-pagination></app-blog-pagination>
+            </div>
+            <div class="blog-content">
+                <app-blog-sidebar></app-blog-sidebar>
+                <app-blog-recent-posts></app-blog-recent-posts>
+            </div>
+        </div>
     </div>
 </div>
 

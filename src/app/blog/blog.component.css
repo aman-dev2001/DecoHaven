@@ -1,5 +1,15 @@
-.blog-container {
-  padding: 86px 100px;
+.blog-section {
+  /* max-width: 1440px;
+  width: 86%;
+  margin: 0 auto; */
+}
+
+.blog-layout {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 0;
 }
 
 .blog-hero {
@@ -39,6 +49,7 @@
 
 .blog-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -48,23 +59,37 @@
   gap: 42px;
 }
 
-@media (max-width: 767px) {
-  .blog-hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .blog-content {
-    padding: 0 15px;
+@media screen and (max-width: 1366px) {
+  .blog-layout {
+    padding: 72px 0;
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .blog-layout {
+    padding: 64px 0;
+  }
+}
 
-@media screen and (max-width: 1366px) {}
+@media screen and (max-width: 991px) {
+  .blog-layout {
+    padding: 56px 0;
+  }
+}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 767px) {
+  .blog-layout {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
 
-@media screen and (max-width: 991px) {}
+  .blog-layout {
+    padding: 46px 0;
+  }
+}
 
-@media screen and (max-width: 767px) {}
-
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+  .blog-layout {
+    padding: 42px 0;
+  }
+}

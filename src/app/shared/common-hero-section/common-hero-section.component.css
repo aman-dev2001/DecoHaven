@@ -50,11 +50,13 @@
     color: #000;
     font-weight: 500;
     text-decoration: none;
-    padding-right: 16px; /* ✅ arrow के लिए जगह */
+    padding-right: 16px;
+    /* ✅ arrow के लिए जगह */
 }
 
 .crumb::after {
-    content: "›";          /* ✅ arrow icon */
+    content: "›";
+    /* ✅ arrow icon */
     position: absolute;
     right: 0;
     top: 0;
@@ -71,4 +73,30 @@
 /* ✅ Last breadcrumb पर arrow हटाओ */
 .last::after {
     content: "";
+}
+
+@media screen and (max-width: 1366px) {}
+
+@media screen and (max-width: 1024px) {
+    .hero-title {
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero-title {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-title {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-title {
+        font-size: 32px;
+    }
 }
