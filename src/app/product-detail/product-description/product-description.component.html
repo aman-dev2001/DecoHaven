@@ -1,5 +1,5 @@
 <div class="product-description">
-  <!-- ✅ Product Short Description -->
+  <!-- ✅ Product Info -->
   <div class="product-intro">
     <h2>{{ product.title }}</h2>
     <p class="short-desc">{{ product.shortDescription }}</p>
@@ -14,12 +14,10 @@
       <div class="review-card" *ngFor="let review of reviews">
         <div class="review-header">
           <div class="user-info">
-            <strong>{{ review.user }}</strong>
+            <p class="username">{{ review.user }}</p>
             <div class="stars">
-              <i *ngFor="let s of stars"
-                 class="fa"
-                 [class.fa-star]="s <= review.rating"
-                 [class.fa-star-o]="s > review.rating"></i>
+              <i *ngFor="let s of stars" class="fa" [class.fa-star]="s <= review.rating"
+                [class.fa-star-o]="s > review.rating"></i>
             </div>
           </div>
         </div>
@@ -28,34 +26,43 @@
 
         <div class="review-footer">
           <div class="like-dislike">
-            <button (click)="likeReview(review)" class="like-btn">
-              👍 {{ review.likes }}
-            </button>
-            <button (click)="dislikeReview(review)" class="dislike-btn">
-              👎 {{ review.dislikes }}
-            </button>
+            <button (click)="likeReview(review)" class="like-btn">👍 {{ review.likes }}</button>
+            <button (click)="dislikeReview(review)" class="dislike-btn">👎 {{ review.dislikes }}</button>
           </div>
           <span class="time">{{ review.time }}</span>
         </div>
       </div>
     </div>
 
-    <!-- ✅ Add Review Form -->
+    <!-- ✅ Add Review -->
     <div class="add-review">
       <h4>Write a Review</h4>
 
-      <div class="rating">
-        <label>Your Rating:</label>
-        <div class="stars">
-          <i *ngFor="let s of stars"
-             class="fa"
-             [class.fa-star]="s <= rating"
-             [class.fa-star-o]="s > rating"
-             (click)="setRating(s)"></i>
-        </div>
+      <div class="review-container">
+        <form (ngSubmit)="onSubmit()" #form="ngForm" class="review-form">
+          <!-- Rating -->
+          <div class="rating-section">
+            <label class="rating-label">Your Rating:</label>
+            <div class="stars">
+              <i *ngFor="let s of stars" class="fa" [class.fa-star]="s <= rating" [class.fa-star-o]="s > rating"
+                (click)="setRating(s)"></i>
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group effect">
+            <textarea [(ngModel)]="comment" name="comment" class="input-effect" rows="1" required></textarea>
+            <label>Write your review...</label>
+            <span class="focus-border"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class=" btn btn-animated">
+            Submit Review
+          </button>
+        </form>
       </div>
-      <textarea [(ngModel)]="comment" placeholder="Write your experience here..."></textarea>
-      <button class="submit-btn" (click)="submitReview()">Submit Review</button>
+
     </div>
   </div>
 </div>

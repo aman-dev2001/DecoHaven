@@ -10,19 +10,16 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent {
-  // ✅ Sample product info (you can replace with real data)
   product = {
     title: 'Modern Wooden Chair',
     shortDescription:
       'A premium wooden chair with comfortable seating, smooth finish, and long-lasting durability. Perfect for home and office use.'
   };
 
-  // ✅ Star display setup
   stars = [1, 2, 3, 4, 5];
   rating = 0;
   comment = '';
 
-  // ✅ Array of existing reviews
   reviews = [
     {
       user: 'Rahul Sharma',
@@ -50,7 +47,7 @@ export class ProductDescriptionComponent {
     }
   ];
 
-  // ✅ Set rating when user clicks a star
+  // ✅ Handles click on stars
   setRating(value: number) {
     this.rating = value;
   }
@@ -65,7 +62,12 @@ export class ProductDescriptionComponent {
     review.dislikes++;
   }
 
-  // ✅ Submit new review
+  // ✅ When form is submitted
+  onSubmit() {
+    this.submitReview();
+  }
+
+  // ✅ Handles actual review submission
   submitReview() {
     if (!this.comment.trim()) {
       alert('Please write your review before submitting!');
@@ -85,7 +87,7 @@ export class ProductDescriptionComponent {
       time: 'Just now'
     };
 
-    this.reviews.unshift(newReview); // add to top
+    this.reviews.unshift(newReview);
     this.comment = '';
     this.rating = 0;
 

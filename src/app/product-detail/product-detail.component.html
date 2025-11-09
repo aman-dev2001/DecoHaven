@@ -27,7 +27,7 @@
       </div>
       <div class="right-side">
         <h2>{{ product?.title }}</h2>
-        <div class="rating-row d-flex align-items-center gap-3">
+        <div class="rating-row">
           <div class="rating text-warning">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -36,7 +36,7 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <div class="likes text-danger">
-            <span class="text-dark">523 people liked this</span>
+            <span class="text-dark">523</span>
           </div>
         </div>
         <p class="desc">{{ product?.description }}</p>
@@ -62,7 +62,9 @@
           <span>{{ quantity }}</span>
           <button (click)="increaseQty()">+</button>
         </div>
-        <button class="add-cart" (click)="addToCart(product)">Add To Cart</button>
+        <div class="cart-buttons">
+          <button class="add-cart btn-animated" (click)="addToCart(product)">Add To Cart</button>
+        </div>
 
         <div>
           <app-product-description></app-product-description>
