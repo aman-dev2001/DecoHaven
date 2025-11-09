@@ -1,10 +1,37 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
 
-@media screen and (max-width: 1366px) {}
+.page-btn,
+.page-number {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
-@media screen and (max-width: 1024px) {}
+.page-btn:hover:not(:disabled),
+.page-number:hover {
+  background-color: #f7f7f7;
+}
 
-@media screen and (max-width: 991px) {}
+.page-number.active {
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+  color: #000;
+  font-weight: 600;
+}
 
-@media screen and (max-width: 767px) {}
-
-@media screen and (max-width: 576px) {}
+.page-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -103,12 +103,12 @@
 
 input[type="number"],
 select {
-    padding: 12px 16px;
-    border: none;
-    font-size: 16px;
-    color: #9F9F9F;
-    background: #ffffff;
-    appearance: none;
+  padding: 12px 16px;
+  border: none;
+  font-size: 16px;
+  color: #9F9F9F;
+  background: #ffffff;
+  appearance: none;
 }
 
 select {
@@ -136,10 +136,62 @@ select {
 
 @media screen and (max-width: 1366px) {}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+  .filter-group {
+    gap: 30px;
+  }
+
+  .view-toggle {
+    gap: 30px;
+  }
+
+  .right-section {
+    gap: 30px;
+  }
+}
 
 @media screen and (max-width: 991px) {}
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+  .filter-group {
+    gap: 24px;
+  }
 
-@media screen and (max-width: 576px) {}
+  .view-toggle {
+    gap: 24px;
+  }
+
+  .right-section {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filter-group {
+    gap: 20px;
+  }
+
+  .view-toggle {
+    gap: 20px;
+  }
+
+  .right-section {
+    gap: 20px;
+  }
+
+  /* .right-section {
+    flex-wrap: wrap;
+  } */
+  .right-section label{
+    display: none;
+  }
+
+  .show-select{
+    width: 100%;
+  }
+
+  .show-select input
+  {
+    width: 100%;
+  }
+}

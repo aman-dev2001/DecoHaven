@@ -1,1 +1,18 @@
-<p>pagination works!</p>
+<div class="pagination-container">
+  <button class="page-btn" (click)="prevPage()" [disabled]="currentPage === 1">
+    ‹ Prev
+  </button>
+
+  <button
+    *ngFor="let page of [1, 2, 3]"
+    class="page-number"
+    [class.active]="page === currentPage"
+    (click)="changePage(page)"
+  >
+    {{ page }}
+  </button>
+
+  <button class="page-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">
+    Next ›
+  </button>
+</div>

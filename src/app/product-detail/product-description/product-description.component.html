@@ -1,0 +1,61 @@
+<div class="product-description">
+  <!-- ✅ Product Short Description -->
+  <div class="product-intro">
+    <h2>{{ product.title }}</h2>
+    <p class="short-desc">{{ product.shortDescription }}</p>
+  </div>
+
+  <!-- ✅ Review Section -->
+  <div class="review-section">
+    <h3>Customer Reviews ({{ reviews.length }})</h3>
+
+    <!-- ✅ Existing Reviews -->
+    <div class="review-list">
+      <div class="review-card" *ngFor="let review of reviews">
+        <div class="review-header">
+          <div class="user-info">
+            <strong>{{ review.user }}</strong>
+            <div class="stars">
+              <i *ngFor="let s of stars"
+                 class="fa"
+                 [class.fa-star]="s <= review.rating"
+                 [class.fa-star-o]="s > review.rating"></i>
+            </div>
+          </div>
+        </div>
+
+        <p class="review-text">{{ review.comment }}</p>
+
+        <div class="review-footer">
+          <div class="like-dislike">
+            <button (click)="likeReview(review)" class="like-btn">
+              👍 {{ review.likes }}
+            </button>
+            <button (click)="dislikeReview(review)" class="dislike-btn">
+              👎 {{ review.dislikes }}
+            </button>
+          </div>
+          <span class="time">{{ review.time }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Add Review Form -->
+    <div class="add-review">
+      <h4>Write a Review</h4>
+
+      <div class="rating">
+        <label>Your Rating:</label>
+        <div class="stars">
+          <i *ngFor="let s of stars"
+             class="fa"
+             [class.fa-star]="s <= rating"
+             [class.fa-star-o]="s > rating"
+             (click)="setRating(s)"></i>
+        </div>
+      </div>
+      <textarea [(ngModel)]="comment" placeholder="Write your experience here..."></textarea>
+      <button class="submit-btn" (click)="submitReview()">Submit Review</button>
+    </div>
+  </div>
+</div>

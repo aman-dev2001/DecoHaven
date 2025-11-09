@@ -11,11 +11,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule} from '@angular/common';
 import { SwiperContainer } from 'swiper/element';
 import { FeatureProductComponent } from '../shared/feature-product/feature-product.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [CommonModule, FeatureProductComponent],
+  imports: [CommonModule, FeatureProductComponent, ProductDescriptionComponent],
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -1,3 +1,6 @@
+.footer-section {
+  padding: 100px 0 42px 0;
+}
 
 footer h6 {
   font-weight: 600;
@@ -61,11 +64,13 @@ footer input::placeholder {
   font-weight: 400;
   margin-bottom: 32px;
   color: #9F9F9F;
+  max-width: 250px;
+  width: 100%;
 }
 
 .footer-title {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400 !important;
   letter-spacing: 0.5px;
   margin-bottom: 55px;
   color: #9F9F9F;
@@ -85,7 +90,7 @@ footer input::placeholder {
 
 .footer-links li a {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000000;
   text-decoration: none;
 }
@@ -139,21 +144,21 @@ footer input::placeholder {
   margin: 0;
 }
 
-.innner-container {
+.innner-wrapper {
   border-bottom: 1px solid #D9D9D9;
   margin-bottom: 35px;
   padding-bottom: 48px;
 }
 
 @media screen and (max-width: 1366px) {
-  .footer-section .container {
+  .footer-section {
     margin: 0 auto;
     padding: 72px 0 38px 0;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .footer-section .container {
+  .footer-section {
     padding: 64px 0 38px 0;
   }
 
@@ -163,7 +168,7 @@ footer input::placeholder {
 }
 
 @media screen and (max-width: 991px) {
-  .footer-section .container {
+  .footer-section {
     padding: 54px 0 38px 0;
   }
 
@@ -173,12 +178,16 @@ footer input::placeholder {
 }
 
 @media screen and (max-width: 767px) {
-  .footer-section .container {
+  .footer-section {
     padding: 42px 0 32px 0;
   }
 
   .footer-links {
     gap: 32px;
+  }
+
+  .address-details{
+    max-width: unset;
   }
 }
 
@@ -206,12 +215,14 @@ footer input::placeholder {
   .address-details {
     margin-bottom: 24px;
   }
-  .footer-help{
+
+  .footer-help {
     margin-bottom: 24px;
   }
-  .innner-container[_ngcontent-ng-c937389272] {
+
+  .innner-wrapper[_ngcontent-ng-c937389272] {
     border-bottom: 1px solid #D9D9D9;
     margin-bottom: 32px;
     padding-bottom: 32px;
-}
+  }
 }

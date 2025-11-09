@@ -1,41 +1,62 @@
 /* ------------------------------
-   PRODUCT DETAIL PAGE LAYOUT
+   PRODUCT DETAIL PAGE (Flipkart Style)
 --------------------------------*/
-.product-detail {
-  padding: 100px 0px;
-}
-
-/* LEFT SIDE */
-.left-side {
+.product-detail-wrapper {
   display: flex;
-  gap: 24px;
-  position: relative;
-  /* zoom-result absolute inside this */
+  justify-content: center;
   align-items: flex-start;
-  flex-shrink: 0;
+  gap: 40px;
+  padding: 40px 0;
+  height: 100vh;
+  /* full view height */
+  overflow: hidden;
+  /* prevent outer scroll */
+  background: #fff;
 }
 
-/* THUMBS */
+/* ✅ LEFT SIDE (Fixed Preview Area) */
+.left-side {
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+  width: 520px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #fff;
+  z-index: 20;
+}
+
+/* Thumbnails column */
 .thumbs {
-  width: 85px;
+  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
+.thumbs::-webkit-scrollbar {
+  width: 6px;
+}
+
+.thumbs::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Each thumbnail */
 .thumb {
-  width: 72px;
-  height: 72px;
-  border-radius: 8px;
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  border: 2px solid transparent;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.18s ease;
+  transition: all 0.2s ease;
   background: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .thumb img {
@@ -45,91 +66,101 @@
 }
 
 .thumb:hover {
+  border-color: #ccc;
   transform: scale(1.05);
-  border-color: #ddd;
 }
 
 .thumb.active {
-  border-color: #5F56D6;
-  transform: scale(1.07);
+  border-color: #2874f0;
 }
 
-/* MAIN / ZOOM CONTAINER */
+/* ✅ Main image container */
 .zoom-container {
-  display: flex;
-  gap: 24px;
+  width: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
 }
 
-/* MAIN IMAGE */
 .main-image {
-  position: relative;
-  width: 450px;
-  /* base size used in TS */
-  height: 450px;
+ max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  height: 420px;
   border-radius: 8px;
+  border: 1px solid #e0e0e0;
   overflow: hidden;
-  border: 1px solid #e6e6e6;
+  position: relative;
   background: #fff;
-  flex-shrink: 0;
 }
 
 .main-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  user-select: none;
+  object-fit: cover;
   pointer-events: none;
+  user-select: none;
 }
 
-/* LENS */
+/* ✅ Lens (for zoom) */
 .lens {
   position: absolute;
-  border: 2px solid rgba(25, 118, 210, 0.95);
+  border: 2px solid rgba(40, 116, 240, 0.9);
   background: rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
   pointer-events: none;
-  /* do not capture pointer */
-  z-index: 20;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
-  /* width/height set dynamically from [ngStyle] */
+  z-index: 5;
 }
 
-/* ZOOM RESULT — ABSOLUTE INSIDE left-side so it won't push right-side */
+/* ✅ Zoom preview (same as Flipkart style) */
 .zoom-result {
   position: absolute;
   top: 0;
-  left: calc(100% + 24px);
-  /* places it right of main-image plus gap */
-  width: 450px;
-  height: 450px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  background-size: cover;
+  left: calc(100% + 20px);
+  width: 420px;
+  height: 420px;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  z-index: 18;
-  pointer-events: none;
-  background-color: #ffffff;
-  /* does not capture pointer so hover stays on main-image */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  z-index: 10;
 }
 
-/* RIGHT SIDE */
+/* ✅ RIGHT SIDE (Scroll area) */
 .right-side {
-  max-width: 560px;
-  width: 100%;
+  flex: 1;
+  max-width: 600px;
+  height: 100vh;
+  overflow-y: auto;
+  padding-right: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  scroll-behavior: smooth;
 }
 
+/* Scrollbar style */
+.right-side::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-side::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+.right-side::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Product content */
 .right-side h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
   color: #111;
 }
 
@@ -137,32 +168,28 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 6px;
 }
 
 .rating i {
   color: #ffb400;
-  margin-right: 4px;
 }
 
 .likes {
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: #666;
   font-size: 14px;
+  color: #666;
+  gap: 6px;
 }
 
 .likes i {
   color: #e53935;
 }
 
-/* DESCRIPTION & PRICE */
 .desc {
   color: #555;
   font-size: 15px;
   line-height: 1.6;
-  margin: 8px 0 12px;
 }
 
 .price {
@@ -172,8 +199,8 @@
 }
 
 .new-price {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: 700;
   color: #111;
 }
 
@@ -183,15 +210,14 @@
   text-decoration: line-through;
 }
 
-/* OPTIONS */
 .product-option {
   margin-top: 10px;
 }
 
 .product-option p {
-  margin: 8px 0;
   font-weight: 600;
   color: #333;
+  margin-bottom: 6px;
 }
 
 .sizes span {
@@ -204,46 +230,45 @@
 }
 
 .sizes span.active {
-  background: #5F56D6;
+  background: #2874f0;
   color: #fff;
-  border-color: #5F56D6;
+  border-color: #2874f0;
 }
 
 .colors span {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-right: 8px;
-  cursor: pointer;
+  display: inline-block;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .colors span.active {
   border-color: #000;
 }
 
-/* QTY & CART */
 .qty-box {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .qty-box button {
   width: 38px;
   height: 38px;
-  border-radius: 6px;
   border: 1px solid #ddd;
   background: #fff;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 .add-cart {
-  margin-top: 14px;
-  padding: 12px 28px;
-  background: #5F56D6;
+  margin-top: 16px;
+  padding: 12px;
+  background: #2874f0;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -251,64 +276,32 @@
   font-weight: 600;
 }
 
-/* small improvements */
-@media (max-width: 1200px) {
-  .product-detail {
-    gap: 30px;
-    padding: 30px;
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .product-detail-wrapper {
+    height: auto;
+    padding: 20px 0;
   }
 
-  .main-image,
-  .zoom-result {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .product-detail {
-    flex-direction: column;
-    padding: 22px;
-    align-items: center;
+  .left-side {
+    position: relative;
+    /* width: 100%; */
+    justify-content: center;
   }
 
   .zoom-result {
     display: none;
   }
 
-  /* disable zoom on tablet */
+  .right-side {
+    height: auto;
+    overflow: visible;
+  }
+
   .left-side {
-    justify-content: center;
-  }
-
-  .main-image {
+    max-width: 420px;
     width: 100%;
-    height: 380px;
-  }
-}
-
-@media (max-width: 768px) {
-  .thumbs {
-    flex-direction: row;
-    width: 100%;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .thumb {
-    width: 60px;
-    height: 60px;
-  }
-
-  .main-image {
-    height: 320px;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-detail {
-    padding: 16px;
-    gap: 18px;
+    margin: 0 auto;
   }
 
   .thumb {
@@ -320,19 +313,41 @@
     height: 260px;
   }
 
-  .add-cart {
-    width: 100%;
-    text-align: center;
+  .left-side {
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    z-index: 20;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: left;
+  }
+
+  .thumbs {
+    flex-direction: row;
+    width: unset;
   }
 }
 
+@media (max-width: 768px) {
+  .product-detail-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-@media screen and (max-width: 1366px) {}
+  .thumbs {
+    flex-direction: row;
+    width: 100%;
+  }
 
-@media screen and (max-width: 1024px) {}
+  .thumb {
+    width: 60px;
+    height: 60px;
+  }
 
-@media screen and (max-width: 991px) {}
+  .left-side {
+    margin: unset;
+  }
+}
 
-@media screen and (max-width: 767px) {}
-
-@media screen and (max-width: 576px) {}
+@media (max-width: 767px) {}

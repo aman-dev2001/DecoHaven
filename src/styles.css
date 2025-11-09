@@ -112,6 +112,11 @@
   animation: none;
 }
 
+.product-detail-wrapper {
+  display: flex;
+  gap: 56px;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 90%;
@@ -125,4 +130,3 @@
     margin: 0 auto;
   }
 }
-
