@@ -1,4 +1,4 @@
-<section class="product-section">
+<section class="product-section-wrapper">
   <div class="container">
     <div class="product-grid">
       <div class="product-card" *ngFor="let product of products" (click)="goToDetail(product.id)">
@@ -20,6 +20,7 @@
             <i *ngFor="let star of getStars(); let i = index" class="fa-star" [class.filled]="i < product.rating"
               [class.fa-solid]="i < product.rating" [class.fa-regular]="i >= product.rating"></i>
           </div>
+
           <div class="price-box">
             <span class="new-price">
               ${{ getDiscountedPrice(product.price, product.discount) }}

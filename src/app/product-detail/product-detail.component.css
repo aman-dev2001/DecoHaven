@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  padding: 40px 0;
-  height: 100vh;
+  padding: 40px 0 0 0;
+  height: 460px;
   /* full view height */
   overflow: hidden;
   /* prevent outer scroll */
@@ -133,7 +133,7 @@
 /* ✅ RIGHT SIDE (Scroll area) */
 .right-side {
   max-width: 600px;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   padding-right: 16px;
   display: flex;

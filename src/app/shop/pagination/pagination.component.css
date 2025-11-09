@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 25px;
   flex-wrap: wrap;
 }
 
@@ -15,7 +14,7 @@
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 

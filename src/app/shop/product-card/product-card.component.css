@@ -1,5 +1,5 @@
-.product-section {
-  padding: 50px 0;
+.product-section-wrapper {
+  margin-bottom: 56px;
 }
 
 .product-grid {
@@ -13,7 +13,7 @@
   border-radius: 10px;
   background: #fff;
   padding: 15px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
 }
 
@@ -30,11 +30,13 @@
   padding: 8px 10px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
 .wishlist-icon:hover {
   background: #fce7e7;
 }
+
 .wishlist-icon i {
   font-size: 18px;
   color: #d40000;
@@ -64,7 +66,7 @@
   color: #fff;
   padding: 5px 12px;
   font-size: 13px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 /* Info */
@@ -124,38 +126,55 @@
 }
 
 .wishlist-icon {
-    position: absolute;
-    right: 18px;
-    top: 18px;
-    background: #fff;
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  background: #fff;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
 }
 
 .wishlist-icon i {
-    font-size: 18px;
-    color: #ccc; /* default light heart */
-    transition: 0.3s ease;
+  font-size: 18px;
+  color: #ccc;
+  /* default light heart */
+  transition: 0.3s ease;
 }
 
 .wishlist-icon i.active {
-    color: red;
+  color: red;
 }
 
 
-@media screen and (max-width: 1366px) {}
+@media screen and (max-width: 1366px) {
+    .product-section-wrapper {
+    margin-bottom: 52px;
+  }
+}
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+  .product-section-wrapper {
+    margin-bottom: 46px;
+  }
+}
 
 @media screen and (max-width: 991px) {}
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+  .product-section-wrapper {
+    margin-bottom: 42px;
+  }
+}
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .product-section-wrapper {
+    margin-bottom: 36px;
+  }
+}
