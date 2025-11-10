@@ -9,12 +9,9 @@
   padding: 24px 0;
   border-bottom: 1px solid #f0f0f0;
   font-family: "Poppins", sans-serif;
-  flex-wrap: wrap;
   gap: 15px;
-
 }
 
-/* Left side */
 .filter-group {
   display: flex;
   align-items: center;
@@ -59,7 +56,6 @@
 .divider {
   position: relative;
   width: 1px;
-  /* narrow container */
 }
 
 .divider::before {
@@ -71,7 +67,6 @@
   width: 1px;
   background-color: #ccc;
 }
-
 
 .results-info {
   font-size: 16px;
@@ -93,12 +88,14 @@
   gap: 16px;
   font-size: 14px;
   color: #000;
+  width: 100%;
 }
 
 .show-select label,
 .sort-select label {
   font-size: 16px;
   margin: 0;
+  white-space: nowrap;
 }
 
 input[type="number"],
@@ -109,10 +106,11 @@ select {
   color: #9F9F9F;
   background: #ffffff;
   appearance: none;
+  width: 100%;
 }
 
 select {
-  width: 130px;
+  width: 100%;
 }
 
 /* Responsive layout */
@@ -182,16 +180,15 @@ select {
   /* .right-section {
     flex-wrap: wrap;
   } */
-  .right-section label{
+  .right-section label {
     display: none;
   }
 
-  .show-select{
+  .show-select {
     width: 100%;
   }
 
-  .show-select input
-  {
+  .show-select input {
     width: 100%;
   }
 }

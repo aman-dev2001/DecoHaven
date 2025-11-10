@@ -211,17 +211,12 @@
     max-width: unset;
     margin-bottom: 24px;
   }
+
   .newsletter {
     margin-top: 32px;
   }
-  /* .footer-pages,
-  .footer-help,
-  .newsletter {
-    margin-bottom: 32px;
-  } */
 }
 
-/* 📱 Small Mobile (≤576px) */
 @media (max-width: 576px) {
   .footer-section {
     padding: 36px 0 26px;
