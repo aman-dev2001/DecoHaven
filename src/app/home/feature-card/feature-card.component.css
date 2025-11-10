@@ -46,10 +46,6 @@
     width: 100%;
     margin: 10px 0 !important;
   }
-
-  .product-img {
-    height: 200px;
-  }
 }
 
 @media screen and (max-width: 1366px) {}
