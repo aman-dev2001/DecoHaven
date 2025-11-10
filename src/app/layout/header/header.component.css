@@ -4,7 +4,6 @@
 
 .navbar .nav-link {
   color: #000;
-  margin: 0 10px;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -22,6 +21,26 @@
 
 .icon-group i:hover {
   color: #ffce00;
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.icon-wrapper i {
+  font-size: 28px;
+}
+
+.nav-link-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.nav-item a {
+  padding: 0;
 }
 
 /* Responsive adjustments */

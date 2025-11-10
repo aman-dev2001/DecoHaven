@@ -1,13 +1,13 @@
 .feature-section {
+  padding: 64px 0;
   background-color: #faf4f4;
 }
 
-.product-img {
-  width: 100%;
-  height: 250px;
-  /* object-fit: cover; */
-  border-radius: 8px;
-  margin-bottom: 20px;
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
 }
 
 .feature-card h3 {
@@ -16,6 +16,19 @@
   color: #333;
   margin-bottom: 20px;
 }
+
+.feature-card {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 
 .view-btn {
   border: none;

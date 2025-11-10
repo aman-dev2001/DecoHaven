@@ -1,5 +1,9 @@
 .footer-section {
   padding: 100px 0 42px 0;
+  border-top: 1px solid #ccc;
+}
+
+.inner-wrapper {
 }
 
 footer h6 {
@@ -186,7 +190,7 @@ footer input::placeholder {
     gap: 32px;
   }
 
-  .address-details{
+  .address-details {
     max-width: unset;
   }
 }
