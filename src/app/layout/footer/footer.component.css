@@ -3,8 +3,7 @@
   border-top: 1px solid #ccc;
 }
 
-.inner-wrapper {
-}
+.inner-wrapper {}
 
 footer h6 {
   font-weight: 600;
@@ -140,8 +139,15 @@ footer input::placeholder {
   border-bottom: 1px solid #000000;
 }
 
+.copy-right-section {
+  margin-top: 40px;
+  padding: 40px 0 0 0;
+  border-top: 1px solid #ccc;
+}
+
 .copyright {
   text-align: left;
+  margin: 0;
 }
 
 .copyright p {

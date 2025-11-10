@@ -1,4 +1,8 @@
 
+main.main-container {
+    padding-top: 88px;
+}
+
 @media screen and (max-width: 1366px) {}
 
 @media screen and (max-width: 1024px) {}

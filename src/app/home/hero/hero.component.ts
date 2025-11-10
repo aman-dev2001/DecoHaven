@@ -1,54 +1,58 @@
-import { Component, AfterViewInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 @Component({
   selector: 'app-hero',
-  standalone: true,
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], // ✅ necessary for swiper web components
+  styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements AfterViewInit {
-
   ngAfterViewInit(): void {
-    // ✅ Select the Swiper container safely
-    const swiperEl = document.querySelector('swiper-container') as any;
-
-    if (!swiperEl) {
-      console.warn('Swiper element not found!');
-      return;
-    }
-
-    // ✅ Assign Swiper configuration
-    swiperEl.params = {
+    const swiper = new Swiper('.hero-swiper', {
+      modules: [Navigation, Pagination, Autoplay, EffectFade],
       loop: true,
-      speed: 1200,
-      parallax: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000,
       autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
+        delay: 3000,
+        disableOnInteraction: false
       },
       pagination: {
-        clickable: true,
+        el: '.swiper-pagination',
+        clickable: true
       },
       navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-prev'
       },
-      effect: 'slide',
-    };
+      on: {
+        // ✅ Correct typing and usage
+        slideChangeTransitionStart(swiper) {
+          const slides = document.querySelectorAll<HTMLElement>('.swiper-slide');
+          slides.forEach((slide) => {
+            const bg = slide.getAttribute('data-background');
+            if (bg) {
+              slide.style.backgroundImage = `url(${bg})`;
+            }
+          });
+        },
+      },
+    });
 
-    // ✅ Initialize swiper (required for Web Components)
-    swiperEl.initialize();
-
-    // ✅ Apply background images from data-background attributes
-    const slides = swiperEl.querySelectorAll('.slide-bg-image');
-
-    slides.forEach((slide: HTMLElement) => {
+    // ✅ Set initial background
+    const slides = document.querySelectorAll<HTMLElement>('.swiper-slide');
+    slides.forEach((slide) => {
       const bg = slide.getAttribute('data-background');
       if (bg) {
         slide.style.backgroundImage = `url(${bg})`;
-        slide.style.backgroundSize = 'cover';
-        slide.style.backgroundPosition = 'center';
       }
     });
   }

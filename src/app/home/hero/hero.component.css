@@ -1,122 +1,270 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-.hero-style {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+body {
+  margin: 0;
   font-family: 'Rajdhani', sans-serif;
-}
-
-.swiper-container,
-swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  position: relative;
-}
-
-.slide-bg-image {
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-}
-
-.slide-bg-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*--------------------------------------------------------------
+# Hero Slider
+--------------------------------------------------------------*/
+.hero-slider {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper.hero-swiper{
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero-slider {
+    height: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-slider {
+    height: 500px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Swiper Base
+--------------------------------------------------------------*/
+.hero-slider .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider .swiper-slide {
+  overflow: hidden;
   color: #fff;
-  z-index: 5;
-  max-width: 500px;
+  position: relative;
+}
+
+.slide-inner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding-left: 100px;
+  transition: transform 1.2s ease;
+}
+
+.slide-inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.4);
+  z-index: 0;
+}
+
+/*--------------------------------------------------------------
+# Slide Content
+--------------------------------------------------------------*/
+.slide-title,
+.slide-text,
+.slide-btns {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.swiper-slide-active .slide-title,
+.swiper-slide-active .slide-text,
+.swiper-slide-active .slide-btns {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .slide-title h2 {
-  font-size: 64px;
-  font-weight: 500;
-  margin-bottom: 35px;
-  color: #ffffff;
+  font-size: 90px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1199px) {
+  .slide-title h2 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 991px) {
+  .slide-title h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide-title h2 {
+    font-size: 35px;
+  }
 }
 
 .slide-text p {
-  font-size: 20px;
-  font-weight: 400px;
-  margin: 24px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  line-height: 1.4;
 }
 
-.slide-btns a {
-  display: inline-block;
-  text-decoration: none;
+@media (max-width: 767px) {
+  .slide-text p {
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+.theme-btn-s2 {
+  background-color: #fff;
+  color: #2b3b95;
+  font-size: 18px;
   font-weight: 500;
-  padding: 12px 24px;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 15px;
   transition: all 0.3s ease;
 }
 
-.theme-btn-s2 {
-  background: #ffca28;
-  color: #000;
-}
-
 .theme-btn-s2:hover {
-  background: #ffd54f;
+  background-color: #2b3b95;
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 .theme-btn-s3 {
-  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
   color: #fff;
-  border: 2px solid #fff;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.theme-btn-s3 i {
+  margin-right: 6px;
 }
 
 .theme-btn-s3:hover {
-  background: #fff;
-  color: #000;
+  color: #ffd700;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+/*--------------------------------------------------------------
+# Swiper Buttons
+--------------------------------------------------------------*/
+.swiper-button-prev,
+.swiper-button-next {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #ffffff90;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
   color: #fff;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #ffca28;
+.hero-slider:hover .swiper-button-prev,
+.hero-slider:hover .swiper-button-next {
+  opacity: 1;
+  visibility: visible;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #2b3b95;
+  border-color: #2b3b95;
+}
+
+/*--------------------------------------------------------------
+# Pagination Bullets
+--------------------------------------------------------------*/
 .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
   background: #fff;
-  opacity: 0.7;
+  opacity: 0.4;
+  transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background: #ffca28;
   opacity: 1;
+  background: #2b3b95;
+  transform: scale(1.3);
 }
 
-@media (max-width: 768px) {
-  .slide-title h2 {
-    font-size: 2rem;
+.swiper-pagination {
+  bottom: 40px !important;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg
+{
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .slide-inner {
+    padding-left: 30px;
+  }
+
+  .theme-btn-s2 {
+    padding: 10px 24px;
+    font-size: 14px;
   }
 
   .slide-text p {
-    font-size: 1rem;
-  }
-
-  .container {
-    left: 5%;
+    font-size: 16px;
   }
 }
+
 
 @media screen and (max-width: 1366px) {}
 
