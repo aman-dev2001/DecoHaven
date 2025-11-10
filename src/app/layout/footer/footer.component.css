@@ -1,26 +1,59 @@
+/* ---------- Base Footer ---------- */
 .footer-section {
-  padding: 100px 0 42px 0;
+  padding: 72px 0 42px;
   border-top: 1px solid #ccc;
+  background: #fff;
 }
 
-.inner-wrapper {}
+.footer-logo {
+  margin-bottom: 32px;
+}
 
-footer h6 {
+.address-details {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: #9f9f9f;
+  max-width: 250px;
+}
+
+.footer-title {
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin-bottom: 55px;
+  color: #9f9f9f;
 }
 
-footer a:hover {
+/* ---------- Links ---------- */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin: 0 !important;
+}
+
+.footer-links li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #ffce00;
   text-decoration: underline;
 }
 
-footer input::placeholder {
-  color: #aaa;
-  font-size: 14px;
+/* ---------- Social Icons ---------- */
+.social-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .social-icons .icon {
-  position: relative;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -30,24 +63,21 @@ footer input::placeholder {
   justify-content: center;
   color: #000;
   font-size: 18px;
-  transition: 0.3s ease;
-  overflow: hidden;
-  /* ✅ icon बाहर नहीं आएगा */
   border: 1px solid #ddd;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-/* ✅ Hover मुख्य effect */
 .social-icons .icon:hover {
   background: #000;
   color: #fff;
 }
 
-/* ✅ Inside ring animation */
 .social-icons .icon::before {
   content: "";
   position: absolute;
   inset: 6px;
-  /* ✅ अंदर ही border बनेगा */
   border-radius: 50%;
   border: 2px solid #000;
   opacity: 0;
@@ -55,186 +85,167 @@ footer input::placeholder {
   transition: 0.3s ease-out;
 }
 
-/* ✅ Hover → inner ring visible + glow */
 .social-icons .icon:hover::before {
   opacity: 0.5;
   transform: scale(1);
   border-color: #fff;
 }
 
-.address-details {
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 32px;
-  color: #9F9F9F;
-  max-width: 250px;
-  width: 100%;
-}
-
-.footer-title {
-  font-size: 16px;
-  font-weight: 400 !important;
-  letter-spacing: 0.5px;
-  margin-bottom: 55px;
-  color: #9F9F9F;
-}
-
-.footer-links {
-  display: flex;
-  gap: 46px;
-  flex-direction: column;
-  margin: 0 !important;
-
-}
-
-.footer-links li {
-  /* margin-bottom: 46px; */
-}
-
-.footer-links li a {
-  font-size: 16px;
-  font-weight: 400;
-  color: #000000;
-  text-decoration: none;
-}
-
-.footer-logo {
-  margin-bottom: 32px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.news-latter-form {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.news-latter-form input {
+/* ---------- Newsletter ---------- */
+.newsletter-form input {
   font-size: 14px;
-  border: none;
   border-radius: 0;
-  border-bottom: 1px solid #000000;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
-.news-latter-form input:focus {
+.newsletter-form input:focus {
   outline: none;
+  box-shadow: none;
+  border-color: #000;
 }
 
-.news-latter-form input::placeholder {
+.newsletter-form button {
   font-size: 14px;
-  color: #9F9F9F;
-}
-
-.subscribe-btn {
-  font-size: 14px;
-  font-weight: 500;
-  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   border: none;
-  border-radius: 0;
-  border-bottom: 1px solid #000000;
+  transition: all 0.3s ease;
 }
 
+.newsletter-form button:hover {
+  background: #ffce00;
+  color: #000;
+}
+
+/* ---------- Copyright ---------- */
 .copy-right-section {
   margin-top: 40px;
-  padding: 40px 0 0 0;
+  padding-top: 40px;
   border-top: 1px solid #ccc;
 }
 
 .copyright {
-  text-align: left;
-  margin: 0;
-}
-
-.copyright p {
   font-size: 16px;
-  color: #000000;
+  color: #000;
   margin: 0;
+  text-align: left;
 }
 
-.innner-wrapper {
-  border-bottom: 1px solid #D9D9D9;
-  margin-bottom: 35px;
-  padding-bottom: 48px;
-}
+/* ---------- Responsive ---------- */
 
-@media screen and (max-width: 1366px) {
+/* 💻 Large Desktop (≤1366px) */
+@media (max-width: 1366px) {
   .footer-section {
-    margin: 0 auto;
-    padding: 72px 0 38px 0;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .footer-section {
-    padding: 64px 0 38px 0;
+    padding: 64px 0 38px;
   }
 
   .footer-links {
-    gap: 42px;
+    gap: 40px;
+  }
+
+  .website-logo-section {
+    margin-bottom: 36px;
   }
 }
 
-@media screen and (max-width: 991px) {
+/* 💻 Laptop & Tablet Landscape (≤1024px) */
+@media (max-width: 1024px) {
   .footer-section {
-    padding: 54px 0 38px 0;
+    padding: 60px 0 36px;
   }
 
   .footer-links {
     gap: 36px;
   }
+
+  .footer-title {
+    margin-bottom: 40px;
+  }
+
+  .address-details {
+    margin-bottom: 28px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+/* 📱 Tablet Portrait (≤991px) */
+@media (max-width: 991px) {
   .footer-section {
-    padding: 42px 0 32px 0;
+    padding: 54px 0 34px;
   }
 
   .footer-links {
-    gap: 32px;
+    gap: 30px;
+  }
+
+  .footer-title {
+    margin-bottom: 36px;
+  }
+
+
+
+  .website-logo-section {
+    margin-bottom: 32px;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+/* 📱 Mobile Landscape (≤767px) */
+@media (max-width: 767px) {
+  .footer-section {
+    padding: 42px 0 28px;
+  }
+
+  .footer-links {
+    gap: 26px;
+  }
+
+  .footer-title {
+    margin-bottom: 28px;
   }
 
   .address-details {
     max-width: unset;
+    margin-bottom: 24px;
   }
+  .newsletter {
+    margin-top: 32px;
+  }
+  /* .footer-pages,
+  .footer-help,
+  .newsletter {
+    margin-bottom: 32px;
+  } */
 }
 
-@media screen and (max-width: 576px) {
-  .footer-links {
-    gap: 24px;
+/* 📱 Small Mobile (≤576px) */
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 36px 0 26px;
   }
 
-  .footer-pages {
-    margin-bottom: 24px;
+  .footer-links {
+    gap: 22px;
   }
 
   .footer-title {
     margin-bottom: 24px;
   }
 
-  .website-logo-section {
-    margin-bottom: 24px;
-  }
-
   .footer-logo {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
-  .address-details {
-    margin-bottom: 24px;
+  .social-icons {
+    justify-content: flex-start;
+    gap: 12px;
   }
 
-  .footer-help {
-    margin-bottom: 24px;
-  }
-
-  .innner-wrapper[_ngcontent-ng-c937389272] {
-    border-bottom: 1px solid #D9D9D9;
-    margin-bottom: 32px;
-    padding-bottom: 32px;
+  .copyright {
+    text-align: center;
+    font-size: 14px;
   }
 }
