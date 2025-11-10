@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { CartComponent } from './cart/cart.component'
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 export const routes: Routes = [
@@ -25,4 +26,5 @@ export const routes: Routes = [
       import('./product-detail/product-detail.component')
         .then(m => m.ProductDetailComponent),
   },
+  { path: '**', component: NotFoundComponent }
 ];

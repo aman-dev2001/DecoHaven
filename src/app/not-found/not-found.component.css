@@ -1,0 +1,66 @@
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page_404 {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.four_zero_four_bg {
+  background-image: url('/assets/images/page-404.gif');
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 100px;
+  font-weight: 800;
+  color: #1f2a44;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content Box */
+.content_box_404 {
+  margin-top: 20px;
+}
+
+.content_box_404 h3 {
+  font-size: 1.8rem;
+  color: #1f2a44;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.content_box_404 p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .four_zero_four_bg {
+    height: 250px;
+  }
+
+  .four_zero_four_bg h1 {
+    font-size: 70px;
+  }
+
+  .content_box_404 h3 {
+    font-size: 1.5rem;
+  }
+}

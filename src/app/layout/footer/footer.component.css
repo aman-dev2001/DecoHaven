@@ -140,7 +140,9 @@ footer input::placeholder {
   border-bottom: 1px solid #000000;
 }
 
-.copyright {}
+.copyright {
+  text-align: left;
+}
 
 .copyright p {
   font-size: 16px;
