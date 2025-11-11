@@ -67,7 +67,7 @@
 
 .slide-content p {
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   animation: slideUp 1s ease forwards;
   animation-delay: 0.3s;
 }
@@ -79,17 +79,26 @@
   flex-wrap: wrap;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
   max-width: 250px;
   width: 100%;
   text-align: center;
   padding: 20px;
+  font-size: 20px;
   font-weight: 500;
-  color: #000;
-  background-color: #FFC107;
   border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #FFC107;
 }
 
 .btn-primary:hover {
@@ -98,19 +107,8 @@
 }
 
 .btn-secondary {
-  max-width: 250px;
-  width: 100%;
-  padding: 20px;
   border: 2px solid #fff;
   color: #fff;
-  font-weight: 500;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
@@ -127,7 +125,7 @@
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
   border: none;
-  font-size: 1.5rem;
+  font-size: 20px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -213,7 +211,7 @@
 
   .slide-content p {
     font-size: 18px;
-    margin-bottom: 13px;
+    margin-bottom: 24px;
   }
 
   .btn-primary,
@@ -239,6 +237,11 @@
   .btn-secondary {
     max-width: 186px;
     padding: 12px;
+  }
+
+  .slide-content p {
+    font-size: 16px;
+    margin-bottom: 16px;
   }
 
 }

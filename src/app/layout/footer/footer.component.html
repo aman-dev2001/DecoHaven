@@ -40,21 +40,18 @@
 
       <!-- ✅ Column 4: Newsletter -->
       <div class="col-12 col-sm-12 col-md-5 col-lg-3 col-xl-3 newsletter">
-        <h6 class="footer-title">Newsletter</h6>
+        <h6 class="footer-title mb-3">Newsletter</h6>
         <form (submit)="onSubscribe($event)" class="newsletter-form">
-          <input
-            type="email"
-            class="form-control rounded-0 mb-3"
-            placeholder="Enter Your Email Address"
-            [(ngModel)]="email"
-            name="email"
-            required
-          />
-          <button class="btn btn-dark w-100 rounded-0 fw-bold" type="submit">
-            SUBSCRIBE
-          </button>
+          <div class="input-group">
+            <input type="email" class="form-control newsletter-input" placeholder="Enter your email address"
+              [(ngModel)]="email" name="email" required />
+            <button class="btn subscribe-btn" type="submit">
+              SUBSCRIBE
+            </button>
+          </div>
         </form>
       </div>
+
     </div>
 
     <!-- ✅ Copyright -->
