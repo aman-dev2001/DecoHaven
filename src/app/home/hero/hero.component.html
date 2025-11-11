@@ -1,103 +1,27 @@
-<section class="hero-slider hero-style relative">
-  <!-- ✅ Swiper Container -->
-  <div class="swiper hero-swiper">
-    <div class="swiper-wrapper">
+<section class="hero-slider">
 
-      <!-- ✅ Slide 1 -->
-      <div class="swiper-slide"
-        data-background="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-inner">
-          <div class="container">
-            <div class="slide-content">
-              <h2 class="slide-title animate-up">Modern Furniture for<br />Elegant Homes</h2>
-              <p class="slide-text animate-up-delay">
-                Discover our stylish collection designed for your comfort and lifestyle.
-              </p>
-              <div class="slide-btns animate-up-delay2">
-                <a routerLink="/shop" class="theme-btn-s2">Shop Now</a>
-                <a routerLink="/about" class="theme-btn-s3">
-                  <i class="bi bi-arrow-right-circle"></i> Learn More
-                </a>
-              </div>
-            </div>
-          </div>
+  <div class="slides-container">
+    <div class="slide"
+         *ngFor="let slide of slides; let i = index"
+         [class.active]="i === currentSlide"
+         [style.backgroundImage]="'url(' + slide.img + ')'">
+      
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1 [innerHTML]="slide.title"></h1>
+        <p>{{ slide.text }}</p>
+        <div class="slide-btns">
+          <a [routerLink]="slide.btn1.link" class="btn-primary">{{ slide.btn1.text }}</a>
+          <a [routerLink]="slide.btn2.link" class="btn-secondary">
+            <i class="bi bi-arrow-right-circle"></i> {{ slide.btn2.text }}
+          </a>
         </div>
       </div>
-
-      <!-- ✅ Slide 2 -->
-      <div class="swiper-slide"
-        data-background="https://images.unsplash.com/photo-1628744445297-3fdc969b5f7f?auto=format&fit=crop&w=1500&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-inner">
-          <div class="container">
-            <div class="slide-content">
-              <h2 class="slide-title animate-up">Premium Sofa<br />Collections</h2>
-              <p class="slide-text animate-up-delay">
-                Bring luxury and comfort together with our exclusive sofa range.
-              </p>
-              <div class="slide-btns animate-up-delay2">
-                <a routerLink="/shop" class="theme-btn-s2">Explore Collection</a>
-                <a routerLink="/contact" class="theme-btn-s3">
-                  <i class="bi bi-arrow-right-circle"></i> Contact Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ✅ Slide 3 -->
-      <div class="swiper-slide"
-        data-background="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-inner">
-          <div class="container">
-            <div class="slide-content">
-              <h2 class="slide-title animate-up">Stylish Lighting<br />For Every Room</h2>
-              <p class="slide-text animate-up-delay">
-                Brighten your space with our premium collection of modern lighting.
-              </p>
-              <div class="slide-btns animate-up-delay2">
-                <a routerLink="/products" class="theme-btn-s2">Browse Lights</a>
-                <a routerLink="/about" class="theme-btn-s3">
-                  <i class="bi bi-arrow-right-circle"></i> Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ✅ Slide 4 -->
-      <div class="swiper-slide"
-        data-background="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=1500&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-inner">
-          <div class="container">
-            <div class="slide-content">
-              <h2 class="slide-title animate-up">Transform Your Home<br />With Elegant Designs</h2>
-              <p class="slide-text animate-up-delay">
-                Add warmth and sophistication to your home with our curated décor.
-              </p>
-              <div class="slide-btns animate-up-delay2">
-                <a routerLink="/shop" class="theme-btn-s2">Start Shopping</a>
-                <a routerLink="/contact" class="theme-btn-s3">
-                  <i class="bi bi-arrow-right-circle"></i> Get Info
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-
-    <!-- ✅ Navigation -->
-    <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
-    <div class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
-
-    <!-- ✅ Pagination -->
-    <div class="swiper-pagination"></div>
   </div>
+
+  <!-- Navigation -->
+  <button class="prev-btn" (click)="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+  <button class="next-btn" (click)="nextSlide()"><i class="bi bi-arrow-right"></i></button>
+
 </section>
