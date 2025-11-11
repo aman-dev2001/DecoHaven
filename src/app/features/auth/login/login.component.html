@@ -1,0 +1,51 @@
+<section class="login-section">
+  <div class="login-wrapper">
+    <!-- Left Image Section -->
+    <div class="login-image">
+      <img src="https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Login Illustration" />
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="login-container">
+      <div class="header">
+        <h2>Welcome Back</h2>
+        <p>Please login to your account to continue.</p>
+      </div>
+
+      <form class="login-form" (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="form-group">
+          <input
+            class="input-effect"
+            type="email"
+            name="email"
+            [(ngModel)]="loginData.email"
+            required />
+          <label>Email Address</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="input-effect"
+            type="password"
+            name="password"
+            [(ngModel)]="loginData.password"
+            required />
+          <label>Password</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="extra-links">
+          <a routerLink="/forgot-password">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="submit-btn btn-animated">Login</button>
+
+        <p class="register-text">
+          Don’t have an account?
+          <a routerLink="/register">Register here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

@@ -8,6 +8,10 @@ import { BlogComponent } from './blog/blog.component';
 import { CartComponent } from './cart/cart.component'
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './features/auth/login/login.component';
+import { RegisterComponent } from './features/auth/register/register.component';
+import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
+import { OtpVerificationComponent } from './features/auth/otp-verification/otp-verification.component';
 
 
 export const routes: Routes = [
@@ -26,5 +30,10 @@ export const routes: Routes = [
       import('./product-detail/product-detail.component')
         .then(m => m.ProductDetailComponent),
   },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'otp-verification', component: OtpVerificationComponent },
+
   { path: '**', component: NotFoundComponent }
 ];
