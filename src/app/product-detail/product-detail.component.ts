@@ -8,7 +8,7 @@ import {
   OnInit
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { SwiperContainer } from 'swiper/element';
 import { FeatureProductComponent } from '../shared/feature-product/feature-product.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
@@ -51,7 +51,7 @@ export class ProductDetailComponent implements OnInit, AfterViewInit {
   mainImageHeight = 0;          // cached height
   zoomResultSize = 450;         // zoom view width/height (px) — matches CSS
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.productId = Number(this.route.snapshot.paramMap.get('id'));
@@ -192,22 +192,24 @@ export class ProductDetailComponent implements OnInit, AfterViewInit {
     {
       id: 1,
       title: 'Modern Wooden Chair',
-      description: 'A stylish wooden chair designed for comfort and durability.',
+      description:
+        'A stylish wooden chair crafted from high-quality oak wood, designed for both comfort and long-lasting durability, perfect for modern living spaces.',
       price: 120,
       discount: 10,
       rating: 4,
-      likes: 523, // people liked
+      likes: 523,
       images: [
         'assets/images/topPicks-1.svg',
         'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-3.svg',
         'assets/images/topPicks-4.svg',
-        'assets/images/topPicks-3.svg'
-      ]
+      ],
     },
     {
       id: 2,
       title: 'Elegant Sofa Set',
-      description: 'Luxury sofa set with premium fabric for your living room.',
+      description:
+        'A luxurious sofa set with premium upholstery and firm cushions that add elegance, warmth, and style to any living room or modern home interior.',
       price: 499,
       discount: 25,
       rating: 5,
@@ -215,9 +217,122 @@ export class ProductDetailComponent implements OnInit, AfterViewInit {
       images: [
         'assets/images/topPicks-2.svg',
         'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-3.svg',
         'assets/images/topPicks-4.svg',
-        'assets/images/topPicks-3.svg'
-      ]
-    }
+      ],
+    },
+    {
+      id: 3,
+      title: 'Classic Coffee Table',
+      description:
+        'An elegant wooden coffee table with a smooth finish, providing both functionality and a timeless design ideal for contemporary and classic interiors.',
+      price: 220,
+      discount: 15,
+      rating: 4,
+      likes: 875,
+      images: [
+        'assets/images/topPicks-3.svg',
+        'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-4.svg',
+      ],
+    },
+    {
+      id: 4,
+      title: 'Luxury Bed Frame',
+      description:
+        'A strong, modern bed frame with a sleek finish and solid base, offering excellent support and a premium look for your cozy bedroom space.',
+      price: 799,
+      discount: 30,
+      rating: 5,
+      likes: 1620,
+      images: [
+        'assets/images/topPicks-4.svg',
+        'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-3.svg',
+      ],
+    },
+    {
+      id: 5,
+      title: 'Minimalist Study Desk',
+      description:
+        'A minimalist study desk with spacious compartments and smooth edges, ideal for modern workspaces and designed to enhance your productivity and comfort.',
+      price: 299,
+      discount: 20,
+      rating: 4,
+      likes: 945,
+      images: [
+        'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-4.svg',
+        'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-3.svg',
+      ],
+    },
+    {
+      id: 6,
+      title: 'Ergonomic Office Chair',
+      description:
+        'Designed with adjustable height, soft cushions, and lumbar support, this ergonomic chair ensures comfort during long hours of work or study.',
+      price: 189,
+      discount: 18,
+      rating: 5,
+      likes: 1310,
+      images: [
+        'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-3.svg',
+        'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-4.svg',
+      ],
+    },
+    {
+      id: 7,
+      title: 'Contemporary Dining Table',
+      description:
+        'A spacious dining table made from premium hardwood, designed for six people, combining durability with modern aesthetics to elevate your dining area.',
+      price: 649,
+      discount: 22,
+      rating: 5,
+      likes: 980,
+      images: [
+        'assets/images/topPicks-3.svg',
+        'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-4.svg',
+      ],
+    },
+    {
+      id: 8,
+      title: 'Cozy Armchair',
+      description:
+        'A plush, cozy armchair with thick padding and soft linen fabric, offering a comfortable seating experience for reading, relaxing, or casual lounging.',
+      price: 250,
+      discount: 12,
+      rating: 4,
+      likes: 712,
+      images: [
+        'assets/images/topPicks-4.svg',
+        'assets/images/topPicks-2.svg',
+        'assets/images/topPicks-3.svg',
+        'assets/images/topPicks-1.svg',
+      ],
+    },
+    {
+      id: 9,
+      title: 'Decorative Floor Lamp',
+      description:
+        'A sleek floor lamp with warm LED lighting and metallic finish, ideal for adding charm, brightness, and modern elegance to your room décor.',
+      price: 149,
+      discount: 8,
+      rating: 4,
+      likes: 640,
+      images: [
+        'assets/images/topPicks-1.svg',
+        'assets/images/topPicks-3.svg',
+        'assets/images/topPicks-4.svg',
+        'assets/images/topPicks-2.svg',
+      ],
+    },
   ];
+
 }

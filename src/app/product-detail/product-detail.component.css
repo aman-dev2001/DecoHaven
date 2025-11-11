@@ -1,6 +1,4 @@
-/* ------------------------------
-   PRODUCT DETAIL PAGE (Flipkart Style)
---------------------------------*/
+
 .product-detail-wrapper {
   display: flex;
   justify-content: center;
@@ -8,13 +6,9 @@
   gap: 40px;
   padding: 40px 0 0 0;
   height: 540px;
-  /* full view height */
   overflow: hidden;
-  /* prevent outer scroll */
   background: #fff;
 }
-
-/* ✅ LEFT SIDE (Fixed Preview Area) */
 .left-side {
   position: sticky;
   top: 0;
@@ -27,9 +21,7 @@
   z-index: 20;
 }
 
-/* Thumbnails column */
 .thumbs {
-  /* mawidth: 80px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +44,6 @@
   max-width: 100px;
   width: 100%;
   margin: 0 auto;
-  /* height: 70px; */
   border-radius: 4px;
   border: 1px solid transparent;
   overflow: hidden;
@@ -69,7 +60,6 @@
 
 .thumb:hover {
   border-color: #ccc;
-  /* transform: scale(1.05); */
 }
 
 .thumb.active {
@@ -167,8 +157,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-
-  margin-bottom: 18px;
+  margin-bottom: 13px;
 }
 
 .rating i {
@@ -190,14 +179,14 @@
 .desc {
   color: #000;
   font-size: 13px;
-  margin: 0 0 22px 0;
+  margin: 0 0 16px 0;
 }
 
 .price {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .new-price {
