@@ -26,11 +26,11 @@ export class BlogRecentPostsComponent implements AfterViewInit {
       direction: 'vertical',
       loop: true,
       autoplay: {
-        delay: 2000, // slower speed between slides
+        delay: 2000,
         disableOnInteraction: false,
       },
-      speed: 900, // smooth transition duration
-      slidesPerView: 3, // shows two posts at once
+      speed: 900, 
+      slidesPerView: 3,
       spaceBetween: 42,
       modules: [Autoplay],
     });

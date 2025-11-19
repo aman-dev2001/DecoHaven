@@ -14,7 +14,7 @@
         <div class="product-title">{{ item.title }}</div>
       </div>
 
-      <div class="price">₹{{ item.price | number: '1.0-0' }}</div>
+      <div class="price">₹ {{ item.price | number: '1.0-0' }}</div>
 
       <div class="qty-box">
         <button (click)="decreaseQty(item)">−</button>
@@ -23,7 +23,6 @@
       </div>
 
       <div class="subtotal">₹{{ item.price * item.qty | number: '1.0-0' }}</div>
-
       <i class="bi bi-trash trash-icon" (click)="removeItem(i)"></i>
     </div>
   </div>

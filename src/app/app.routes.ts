@@ -13,7 +13,6 @@ import { RegisterComponent } from './features/auth/register/register.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { OtpVerificationComponent } from './features/auth/otp-verification/otp-verification.component';
 
-
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: '', redirectTo: 'shop', pathMatch: 'full' },
@@ -34,6 +33,5 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'otp-verification', component: OtpVerificationComponent },
-
   { path: '**', component: NotFoundComponent }
 ];
