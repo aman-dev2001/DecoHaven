@@ -1,11 +1,7 @@
 <div class="wishlist-container" *ngIf="wishlist.length > 0; else emptyWishlist">
-
   <h2 class="title">My Wishlist</h2>
-
   <div class="wishlist-wrapper">
-
     <div class="wishlist-item" *ngFor="let item of wishlist; let i = index">
-
       <div class="product-info">
         <img [src]="item.image" class="product-img" />
         <div>
@@ -13,20 +9,13 @@
           <div class="product-price">Rs. {{ item.price | number:'1.0-0' }}</div>
         </div>
       </div>
-
       <div class="actions">
         <button class="move-cart-btn" (click)="moveToCart(item, i)">Move to Cart</button>
-
         <i class="bi bi-trash trash-icon" (click)="removeItem(i)"></i>
       </div>
-
     </div>
-
   </div>
-
 </div>
-
-<!-- ✅ When Wishlist is Empty -->
 <ng-template #emptyWishlist>
   <div class="empty-box">
     <div class="emoji">💛</div>

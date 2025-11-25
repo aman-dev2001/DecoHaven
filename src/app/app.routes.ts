@@ -12,7 +12,6 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { OtpVerificationComponent } from './features/auth/otp-verification/otp-verification.component';
-
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: '', redirectTo: 'shop', pathMatch: 'full' },

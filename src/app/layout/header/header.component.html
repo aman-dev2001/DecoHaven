@@ -1,28 +1,28 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
   <div class="container d-flex align-items-center justify-content-between">
-    <!-- ✅ Logo + Tagline -->
     <div class="d-flex align-items-center gap-2">
       <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
         <img src="assets/images/header-logo.svg" alt="DecoHaven Logo" height="46" />
       </a>
     </div>
-    <!-- ✅ Right side icons (Always visible) -->
+
     <div class="d-flex align-items-center order-lg-2 icon-wrapper">
       <i class="bi bi-person fs-5" routerLink="/account"></i>
       <i class="bi bi-search fs-5" routerLink="/search"></i>
       <i class="bi bi-heart fs-5" routerLink="/wishlist"></i>
       <i class="bi bi-cart3 fs-5" routerLink="/cart"></i>
     </div>
-    <!-- ✅ Hamburger Menu Button -->
+
     <button class="navbar-toggler border-0 order-lg-3" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- ✅ Menu Links -->
+
     <div class="collapse navbar-collapse justify-content-center order-lg-1" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/shop" routerLinkActive="active">Shop</a>
