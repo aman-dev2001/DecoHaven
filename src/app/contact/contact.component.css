@@ -128,7 +128,86 @@
   width: 100%;
   margin: 0 auto;
 }
+h2 i {
+  font-style: normal;
+  background: #fff;
+  position: relative;
+  padding: 10px;
+}
 
+:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+:focus {
+  outline: none;
+}
+
+.effect {
+  position: relative;
+}
+
+input[type="text"] {
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+
+.input-effect {
+  border: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.input-effect~.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: 0.4s;
+}
+
+.input-effect:focus~.focus-border,
+.has-content.input-effect~.focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.input-effect~label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+
+.input-effect:focus~label,
+.has-content.input-effect~label {
+  top: -16px;
+  font-size: 12px;
+  color: #000000;
+  transition: 0.3s;
+}
+
+
+/* #00363a 
+rgba(48,64,77,0.8)
+*/
 @media screen and (max-width: 1366px) {
   .header {
     text-align: center;
@@ -213,83 +292,3 @@
   }
 }
 
-h2 i {
-  font-style: normal;
-  background: #fff;
-  position: relative;
-  padding: 10px;
-}
-
-:focus {
-  outline: none;
-}
-
-input[type="text"] {
-  color: #333;
-  width: 100%;
-  box-sizing: border-box;
-  letter-spacing: 1px;
-}
-
-:focus {
-  outline: none;
-}
-
-.effect {
-  position: relative;
-}
-
-input[type="text"] {
-  color: #333;
-  width: 100%;
-  box-sizing: border-box;
-  letter-spacing: 1px;
-}
-
-
-.input-effect {
-  border: 0;
-  padding: 8px 0;
-  border-bottom: 1px solid #ccc;
-  background-color: transparent;
-}
-
-.input-effect~.focus-border {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #000000;
-  transition: 0.4s;
-}
-
-.input-effect:focus~.focus-border,
-.has-content.input-effect~.focus-border {
-  width: 100%;
-  transition: 0.4s;
-}
-
-.input-effect~label {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  top: 9px;
-  color: #aaa;
-  transition: 0.3s;
-  z-index: -1;
-  letter-spacing: 0.5px;
-}
-
-.input-effect:focus~label,
-.has-content.input-effect~label {
-  top: -16px;
-  font-size: 12px;
-  color: #000000;
-  transition: 0.3s;
-}
-
-
-/* #00363a 
-rgba(48,64,77,0.8)
-*/
