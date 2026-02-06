@@ -1,0 +1,27 @@
+<section class="hero-slider">
+
+  <div class="slides-container">
+    <div class="slide"
+         *ngFor="let slide of slides; let i = index"
+         [class.active]="i === currentSlide"
+         [style.backgroundImage]="'url(' + slide.img + ')'">
+      
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1 [innerHTML]="slide.title"></h1>
+        <p>{{ slide.text }}</p>
+        <div class="slide-btns">
+          <a [routerLink]="slide.btn1.link" class="btn-primary">{{ slide.btn1.text }}</a>
+          <a [routerLink]="slide.btn2.link" class="btn-secondary">
+            <i class="bi bi-arrow-right-circle"></i> {{ slide.btn2.text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <button class="prev-btn" (click)="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+  <button class="next-btn" (click)="nextSlide()"><i class="bi bi-arrow-right"></i></button>
+
+</section>

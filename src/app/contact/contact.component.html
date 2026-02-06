@@ -1,0 +1,91 @@
+<app-common-hero-section title="Contact" [breadcrumbs]="['Home', 'Contact']"
+  backgroundImage="assets/images/common-hero-section.svg"></app-common-hero-section>
+
+<section class="contact-section">
+  <div class=" container">
+    <div class="header">
+      <h2>Get In Touch With Us</h2>
+      <p>
+        For more information about our product & services, please feel free to
+        drop us an email. Our staff is always there to help you out. Do not
+        hesitate!
+      </p>
+    </div>
+
+    <div class="contact-content">
+      <!-- Left Section -->
+      <div class="contact-info">
+        <div class="info-item">
+          <span class="icon">
+            <img src="assets/images/location.svg" alt="">
+          </span>
+          <div class="detail-container">
+            <h4>Address</h4>
+            <p>236 5th SE Avenue, New York NY10000, United States</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">
+            <img src="assets/images/phone.svg" alt="">
+          </span>
+          <div class="detail-container">
+            <h4>Phone</h4>
+            <p>Mobile: (+84) 546-6789<br />Hotline: (+84) 456-6789</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">
+            <img src="assets/images/clock.svg" alt="">
+          </span>
+          <div class="detail-container">
+            <h4>Working Time</h4>
+            <p>
+              Monday–Friday: 9:00–22:00<br />
+              Saturday–Sunday: 9:00–21:00
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <form class="contact-form" (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="form-group effect">
+          <input class="input-effect" type="text" placeholder="" [(ngModel)]="contactData.name">
+          <label>Your name</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="form-group effect">
+          <input class="input-effect" type="text" placeholder="">
+          <label>First Name</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="form-group effect">
+          <input class="input-effect" type="email" name="email" [(ngModel)]="contactData.email" placeholder=""
+            required />
+          <label>Email address</label>
+        </div>
+
+        <div class="form-group effect">
+          <input class="input-effect" type="text" name="subject" [(ngModel)]="contactData.subject" placeholder="" />
+          <label>Subject</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="form-group effect">
+          <textarea class="input-effect" name="message" [(ngModel)]="contactData.message" rows="1"
+            placeholder=""></textarea>
+          <label>Message</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <button type="submit" class="submit-btn btn-animated">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<app-common-footer-info-section></app-common-footer-info-section>

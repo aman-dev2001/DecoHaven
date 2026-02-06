@@ -6,11 +6,12 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<div class="container mt-5">
-  <div class="alert alert-success text-center">
-    🎉 Bootstrap is working perfectly in DecoHaven!
-  </div>
+<div class="app-layout">
+  <app-header></app-header>
+  <main class="main-container">
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer></app-footer>
 </div>
 
 
@@ -21,6 +22,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />

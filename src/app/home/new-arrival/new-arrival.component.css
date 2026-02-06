@@ -1,0 +1,81 @@
+.furniture-banner {
+  background-color: #faf4e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-container {
+  display: flex;
+  gap: 65px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.banner-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 92px;
+}
+
+.banner-image {
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  text-align: left;
+  flex: 1;
+}
+
+.banner-content .new-arrivals {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.banner-content h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1366px) {}
+
+@media screen and (max-width: 1024px) {
+  .banner-content h2 {
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {
+  .banner-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+    .banner-content h2 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    .banner-content h2 {
+    font-size: 32px;
+  }
+}

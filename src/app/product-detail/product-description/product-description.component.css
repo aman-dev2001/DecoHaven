@@ -1,0 +1,289 @@
+/* ====== Product Description Wrapper ====== */
+.product-description {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ====== Product Intro ====== */
+.product-intro {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.product-intro h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.short-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ====== Review Section ====== */
+.review-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* ====== Review List ====== */
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.review-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fafafa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ====== Review Header ====== */
+.review-header .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-header p {
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.stars {
+  color: #fbc02d;
+  font-size: 14px;
+}
+
+/* ====== Review Text ====== */
+.review-text {
+  font-size: 15px;
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+/* ====== Review Footer ====== */
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-dislike {
+  display: flex;
+  gap: 10px;
+}
+
+.like-btn,
+.dislike-btn {
+  border: none;
+  background: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.like-btn:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.dislike-btn:hover {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.time {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ====== Add Review Form ====== */
+.add-review {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  background: #fff;
+}
+
+.add-review h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.rating label {
+  font-weight: 500;
+  color: #333;
+  margin-right: 10px;
+}
+
+.add-review textarea {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.add-review textarea:focus {
+  border-color: #1976d2;
+}
+
+.submit-btn {
+  background: #2874f0;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #0b59d0;
+  transform: translateY(-1px);
+}
+
+/* new update  */
+
+.contact-form label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.contact-form input,
+.contact-form textarea {
+  /* padding: 20px; */
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #000;
+}
+
+h2 i {
+  font-style: normal;
+  background: #fff;
+  position: relative;
+  padding: 10px;
+}
+
+:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+:focus {
+  outline: none;
+}
+
+.effect {
+  position: relative;
+}
+
+input[type="text"] {
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+
+.input-effect {
+  border: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.input-effect~.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: 0.4s;
+}
+
+.input-effect:focus~.focus-border,
+.has-content.input-effect~.focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.input-effect~label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+
+.input-effect:focus~label,
+.has-content.input-effect~label {
+  top: -16px;
+  font-size: 12px;
+  color: #000000;
+  transition: 0.3s;
+}
+
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+
+  .review-card {
+    padding: 12px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
