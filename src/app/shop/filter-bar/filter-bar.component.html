@@ -1,0 +1,43 @@
+<section class="filter-sec">
+    <div class="container filter-bar">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="filter-group">
+                <button class="filter-btn">
+                    <span><img src="assets/images/icon-filter.svg" alt="Filter"></span>
+                    <span>Filter</span>
+                </button>
+                <div class="view-toggle">
+                   <span><img src="assets/images/icon-grid.svg" alt="Grid View" (click)="toggleView('grid')" [class.active]="viewMode === 'grid'"></span>
+                   <span><img src="assets/images/icon-list.svg" alt="List View" (click)="toggleView('list')" [class.active]="viewMode === 'list'"></span>
+                </div>
+
+                <div class="divider"></div>
+
+                <p class="results-info">
+                    Showing 1–{{ perPage }} of {{ totalResults }} results
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="show-select">
+                <label>Show</label>
+                <input type="number" [(ngModel)]="perPage" min="1" [max]="totalResults" />
+            </div>
+
+            <div class="sort-select">
+                <label>Short by</label>
+                <select [(ngModel)]="sortOption" (change)="onSortChange($event)">
+                    <option value="Default">Default</option>
+                    <option value="Popularity">Popularity</option>
+                    <option value="Rating">Rating</option>
+                    <option value="Latest">Latest</option>
+                    <option value="Low">Price: Low to High</option>
+                    <option value="High">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>

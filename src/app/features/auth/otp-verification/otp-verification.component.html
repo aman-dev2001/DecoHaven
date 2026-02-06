@@ -1,0 +1,44 @@
+<section class="otp-section">
+  <div class="otp-wrapper">
+    <!-- Left Side Image -->
+    <div class="otp-image">
+      <img
+        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1170&q=80"
+        alt="OTP Verification Illustration"
+      />
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="otp-container">
+      <div class="header">
+        <h2>OTP Verification</h2>
+        <p>Enter the 4-digit OTP sent to your registered email.</p>
+      </div>
+
+      <form class="otp-form" (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="otp-input-group">
+          <div class="form-group otp-box" *ngFor="let otp of otpValues; let i = index">
+            <input
+              class="input-effect otp-input"
+              type="text"
+              maxlength="1"
+              [(ngModel)]="otpValues[i]"
+              name="otp{{ i }}"
+              (input)="moveFocus($event, i)"
+              required
+            />
+            <label>Digit {{ i + 1 }}</label>
+            <span class="focus-border"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Verify OTP</button>
+
+        <p class="resend-text">
+          Didn’t receive the OTP?
+          <a (click)="resendOtp()">Resend OTP</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

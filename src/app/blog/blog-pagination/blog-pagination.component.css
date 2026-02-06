@@ -1,0 +1,70 @@
+.pagination-container {
+  text-align: left;
+}
+
+.pagination {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  display: inline-block;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #FAF4F4;
+  border-radius: 5px;
+}
+
+/* Hover Effect */
+.page-link:hover {
+  background-color: #FAF4F4;
+  border-color: #FAF4F4;
+  color: #000;
+}
+
+/* Active Page */
+.page-item.active .page-link {
+  background-color: #FAF4F4;
+  border-color: #FAF4F4;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Next Button */
+.page-item.next .page-link {
+  padding: 10px 22px;
+  background-color: #f7f7f7;
+}
+
+.page-item.next .page-link:hover {
+  background-color: #f7f7f7;
+}
+
+@media screen and (max-width: 1366px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 576px) {}

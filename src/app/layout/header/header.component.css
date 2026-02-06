@@ -1,0 +1,151 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .nav-link {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding: 0 !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffce00;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-left: auto;
+}
+
+.icon-wrapper i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-wrapper i:hover {
+  color: #ffce00;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: 0.25rem;
+  color: #000;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 1366px) {
+  .navbar-nav {
+    gap: 56px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-nav {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .icon-wrapper {
+    gap: 36px;
+  }
+
+  .navbar-nav {
+    gap: 46px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .icon-wrapper {
+    position: relative;
+    margin-left: auto;
+    gap: 32px;
+  }
+
+  .navbar-toggler {
+    margin-left: 20px;
+  }
+
+  .navbar-collapse {
+    background: #fff;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-wrapper {
+    gap: 24px;
+  }
+
+  .icon-wrapper i {
+    font-size: 20px;
+  }
+
+  .navbar-toggler {
+    margin-left: 16px;
+  }
+
+  .navbar-nav {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .icon-wrapper {
+    gap: 20px;
+  }
+
+  .icon-wrapper i {
+    font-size: 18px;
+  }
+
+  .navbar-toggler {
+    margin-left: 10px;
+  }
+
+  .navbar-nav {
+    gap: 24px;
+  }
+}

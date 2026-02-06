@@ -1,6 +1,14 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// ✅ Swiper Web Components import
+import { register } from 'swiper/element/bundle';
+
+// ✅ Register swiper custom elements globally
+register();
+
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes)]
+});

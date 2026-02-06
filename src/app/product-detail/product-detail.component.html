@@ -1,0 +1,76 @@
+<div class="product-detail">
+  <div class="container">
+    <div class="product-detail-wrapper">
+      <div class="left-side">
+        <div class="thumbs">
+          <div *ngFor="let img of images; let i = index" class="thumb" [class.active]="activeIndex === i"
+            (click)="onThumbClick(i)">
+            <img [src]="img" [alt]="'Thumb ' + i" />
+          </div>
+        </div>
+        <div class="zoom-container">
+          <div class="main-image" #mainImage (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
+            <img [src]="images[activeIndex]" [alt]="product?.title" draggable="false" />
+            <div class="lens" *ngIf="zoomActive"
+              [ngStyle]="{ top: lensY + 'px', left: lensX + 'px', width: lensSize + 'px', height: lensSize + 'px' }">
+            </div>
+          </div>
+          <div class="zoom-result" *ngIf="zoomActive && (zoomedImage)" [ngStyle]="{
+          width: zoomResultSize + 'px',
+          height: zoomResultSize + 'px',
+          'background-image': 'url(' + zoomedImage + ')',
+          'background-size': (mainImageWidth * zoomFactor) + 'px ' + (mainImageHeight * zoomFactor) + 'px',
+          'background-position': '-' + bgX + 'px -' + bgY + 'px'
+        }">
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <h2>{{ product?.title }}</h2>
+        <p class="desc">{{ product?.description }}</p>
+        <div class="rating-row">
+          <div class="rating text-warning">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <div class="likes text-danger">
+            <span class="text-dark">523</span>
+          </div>
+        </div>
+        <div class="price">
+          <span class="new-price">${{ getDiscountedPrice(product?.price, product?.discount) }}</span>
+          <span class="old-price" *ngIf="product?.discount">${{ product?.price }}</span>
+        </div>
+        <div class="product-option">
+          <p>Size</p>
+          <div class="sizes">
+            <span *ngFor="let s of sizes" [class.active]="selectedSize === s" (click)="selectedSize = s">{{ s }}</span>
+          </div>
+        </div>
+        <div class="product-option">
+          <p>Color</p>
+          <div class="colors">
+            <span *ngFor="let c of colors" [style.background]="c" [class.active]="selectedColor === c"
+              (click)="selectedColor = c"></span>
+          </div>
+        </div>
+        <div class="qty-box">
+          <button (click)="decreaseQty()">-</button>
+          <span>{{ quantity }}</span>
+          <button (click)="increaseQty()">+</button>
+        </div>
+        <div class="cart-buttons">
+          <button class="add-cart btn-animated" (click)="addToCart(product)">Add To Cart</button>
+        </div>
+
+        <div>
+          <app-product-description></app-product-description>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-feature-product></app-feature-product>
+</div>

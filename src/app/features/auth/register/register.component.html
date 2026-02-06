@@ -1,0 +1,58 @@
+<section class="register-section">
+    <div class="register-wrapper">
+        <!-- Left Side Image -->
+        <div class="register-image">
+            <img src="https://images.unsplash.com/photo-1627618999341-ef3fd4d5c125?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+                alt="Register Illustration" />
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="register-container">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress" [style.width.%]="progress"></div>
+            </div>
+
+            <div class="header">
+                <h2>Create Account</h2>
+                <p>Fill in your details to create a new account.</p>
+            </div>
+
+            <form class="register-form" (ngSubmit)="onSubmit()" #form="ngForm">
+                <div class="form-group">
+                    <input class="input-effect" type="text" name="fullName" [(ngModel)]="registerData.fullName"
+                        required />
+                    <label>Full Name</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="input-effect" type="email" name="email" [(ngModel)]="registerData.email" required />
+                    <label>Email Address</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="input-effect" type="password" name="password" [(ngModel)]="registerData.password"
+                        required />
+                    <label>Password</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="input-effect" type="password" name="confirmPassword"
+                        [(ngModel)]="registerData.confirmPassword" required />
+                    <label>Confirm Password</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <button type="submit" class="submit-btn btn-animated">Register</button>
+
+                <p class="login-text">
+                    Already have an account?
+                    <a routerLink="/login">Login here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>

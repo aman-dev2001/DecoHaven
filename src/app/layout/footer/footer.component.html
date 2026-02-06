@@ -1,0 +1,64 @@
+<footer class="footer-section">
+  <div class="container">
+    <div class="row gx-0 inner-wrapper">
+
+      <!-- ✅ Column 1: Logo & Social -->
+      <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 website-logo-section">
+        <div class="footer-logo">
+          <img src="assets/images/footer-logo.svg" alt="Brand Logo" class="logo-img img-fluid" />
+        </div>
+        <p class="address-details">
+          400 University Drive Suite 200 Coral Gables,<br /> FL 33134 USA
+        </p>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="icon"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- ✅ Column 2: Pages -->
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 footer-pages">
+        <h6 class="footer-title">Pages</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a routerLink="/" class="footer-link">Home</a></li>
+          <li><a routerLink="/about" class="footer-link">About</a></li>
+          <li><a routerLink="/contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- ✅ Column 3: Help -->
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 footer-help">
+        <h6 class="footer-title">Help</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a routerLink="/blog" class="footer-link">Blog</a></li>
+          <li><a routerLink="/returns" class="footer-link">Returns</a></li>
+          <li><a routerLink="/privacy" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- ✅ Column 4: Newsletter -->
+      <div class="col-12 col-sm-12 col-md-5 col-lg-3 col-xl-3 newsletter">
+        <h6 class="footer-title mb-3">Newsletter</h6>
+        <form (submit)="onSubscribe($event)" class="newsletter-form">
+          <div class="input-group">
+            <input type="email" class="form-control newsletter-input" placeholder="Enter your email address"
+              [(ngModel)]="email" name="email" required />
+            <button class="btn subscribe-btn" type="submit">
+              SUBSCRIBE
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- ✅ Copyright -->
+    <div class="row gx-0 copy-right-section">
+      <div class="col-12">
+        <p class="copyright">© 2025 Meubel House. All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
