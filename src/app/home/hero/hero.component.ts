@@ -12,7 +12,7 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   slides = [
     {
-      title: 'Modern Furniture For Elegant Living',
+      title: 'Modern Furniture For Elegfghjkl;ant Living',
       text: 'Curated collections to bring style and comfort to your home.',
       btn1: { text: 'Shop Now', link: '/shop' },
       btn2: { text: 'Learn More', link: '/about' },
